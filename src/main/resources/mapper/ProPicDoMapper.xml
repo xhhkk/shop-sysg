@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.fz.shop.mapper.ProPicDoMapper" >
+  <resultMap id="BaseResultMap" type="com.fz.shop.model.ProPicDo" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="PIC_ID" property="picId" jdbcType="BIGINT" />
+    <result column="P_ID" property="pId" jdbcType="BIGINT" />
+    <result column="PIC_URI" property="picUri" jdbcType="VARCHAR" />
+    <result column="STATE" property="state" jdbcType="TINYINT" />
+    <result column="CREATE_BY" property="createBy" jdbcType="BIGINT" />
+    <result column="CREATE_DATE" property="createDate" jdbcType="TIMESTAMP" />
+    <result column="UPDATE_BY" property="updateBy" jdbcType="BIGINT" />
+    <result column="UPDATE_DATE" property="updateDate" jdbcType="TIMESTAMP" />
+  </resultMap>
+</mapper>

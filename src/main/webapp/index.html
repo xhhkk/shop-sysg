@@ -1,0 +1,2981 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" name="renderer" content="text/html; charset=utf-8; webkit">
+    <meta name="baidu-site-verification" content="QEcYnx9tS8" />
+    <title>生源闪购——郴州本地的网上商城，送货上门</title>
+    <meta name="keywords"    content="郴州,生源闪购,shengyuan.cn,网购,网上超市,网上商城" >
+    <meta name="description" content="生源闪购——shengyuan.cn，郴州综合网上超市，在线销售食品、日用、洗护、母婴、家居百货、生鲜、进口食品各类优质商品，闪电送达，逐不出户逛超市，体验网上购物新生活！" >
+    <link href="resources/front/css/base.css" rel="stylesheet" type="text/css" />
+    <link href="resources/front/css/default.css" rel="stylesheet" type="text/css" />
+    <script src="resources/front/js/jquery.min.js" type="text/javascript"></script>
+    <script src="resources/front/js/dialog.js" type="text/javascript"></script>
+    <script src="resources/front/js/fm.js" type="text/javascript"></script>
+    <script src="resources/front/js/page.js" type="text/javascript"></script>
+    <script type="text/javascript" src="resources/front/js/jquery.validate.js"></script>
+    <script type="text/javascript" src="resources/front/js/common.js"></script>
+    <script src="resources/front/js/lazyload.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="resources/front/js/index.js"></script>
+    <script src="resources/front/js/floorleftroll.js" type="text/javascript"></script>
+    <!--[if lt IE 8]>
+    <script type="text/javascript">
+        $().ready(function() {
+            $(".llsq").show();
+            $(".llsq_close").click(function(){
+                headTop = 0;
+                $(".llsq").hide();
+            });
+        });
+    </script>
+    <![endif]-->
+</head>
+
+<body>
+<!--[if lt IE 8]>
+<input type="hidden" id="baseContext" name="baseContext" value="">
+<div class="llsq hidden">
+    <div class="llsq_cont">
+        <ul>
+            <li class="llsq_ico"></li>
+            <li><dl>您正在使用存在<span>安全漏洞</span>的Internet Explorer过期版本。包括shengyuan.cn在内的许多网站都不再支持，</dl>
+                <dl>这意味着在升级浏览器前，您将无法更好地体验本站服务。我们建议您使用<a href="http://windows.microsoft.com/zh-cn/internet-explorer/download-ie" target="_blank"> Internet Explorer8.0+</a>以获得最佳体验。</dl></li>
+            <li class="llsq_l3"><a class="llsq_btn" target="_blank" href="http://windows.microsoft.com/zh-cn/internet-explorer/download-ie" ></a></li>
+            <div class="clear"></div>
+        </ul>
+        <div>
+            <span class="llsq_close"></span>
+        </div>
+    </div>
+</div>
+<![endif]-->
+
+<!--/*顶部小导航 开始*/-->
+<!--gg-->
+<div class="clear"></div>
+<!---------------------------------header--------------------------------------->
+<meta http-equiv="X-UA-Compatible" content="IE=edge" >
+<meta property="qc:admins" content="15633007266305671516636" />
+<script type="text/javascript" src="resources/front/js/common_event.js"></script>
+<script type="text/javascript" src="resources/front/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="resources/front/js/cart_event.js"></script>
+<script type="text/javascript" src="resources/front/js/search.js"></script>
+<script>
+    $().ready(function() {
+        //导航下拉
+        var sortControl=fm.getElem('#Jsort');
+        var sortList=fm.getElem('#sortList');
+        fm.hide(sortList);
+        if('index'=='index'){
+            fm.show(sortList);
+        }else{
+            fm.addEvent(sortControl,'mouseenter',function(e){
+                fm.slideDown(sortList,210);
+            });
+            fm.addEvent(sortControl,'mouseleave',function(e){
+                fm.slideUp(sortList,210);
+            });
+        }
+        //加载header购物车数量和消息数量信息
+        ajaxCount('');
+    });
+
+    $(function(){
+        //tab选项卡JS
+        $('.tab-nav li').mouseover(function(){
+            var liindex = $('.tab-nav li').index(this);
+            $(this).addClass('active').siblings().removeClass('active');
+            $('.tab-nr li').eq(liindex).fadeIn(150).siblings('.tab-nr li').hide();
+        });
+        //产品图片JS
+        $(".tab-nr li .pro-img").hover(function() {
+            var e = this;
+            $(e).stop().animate({marginLeft: "-5px"}, 250, function() {
+                $(e).animate({marginLeft: "-5px"}, 250);
+            });
+        },function(){
+            var e = this;
+            $(e).stop().animate({marginLeft: "0px"}, 250, function() {
+            });
+        });
+    });
+</script>
+<script type="text/javascript" src="resources/front/js/citySelect.js"></script>
+<script type="text/javascript" src="resources/front/js/jq.cookie.js"></script>
+<script type="text/javascript" src="resources/front/js/top_receiver.js"></script>
+<script type="text/javascript">
+    var base = '';
+    var attachSite = 'http://www.shengyuan.cn';
+    var headTop = 0;
+
+    $().ready(function() {
+        if('index'!='index'){
+            headTop = $("#floatXtopBg").position().top;
+            $(window).bind("scroll",function() {
+                var $ele = $("#floatXtopBg");
+                var scrollTop=$(document).scrollTop();
+                if (scrollTop > headTop) {
+                    $ele.addClass("xtop_postive");
+                    $("body").css({
+                        "padding-top":"30px"
+                    });
+                } else {
+                    $ele.removeClass("xtop_postive");
+                    $("body").css({
+                        "padding-top":"0"
+                    });
+                }
+            });
+        }
+
+
+        var $headerLogin = $("#headerLogin");
+        var $headerRegister = $("#headerRegister");
+        var $headerLogout = $("#headerLogout");
+
+        $headerLogin.attr("href","/login.jhtml?redirectUrl="+encodeURIComponent(window.location.href));
+        $.ajax({
+            url: "/index/getUsername.jhtml",
+            type: "GET",
+            dataType: "text",
+            cache: false,
+            async: false,
+            success: function(username){
+                if (username != null && username!="") {
+                    jQuery("#username").append("<span class='name_b'>"+username+"</span>");
+                    $headerLogout.show();
+                    $headerLogin.hide();
+                    $headerRegister.hide();
+                } else {
+                    jQuery("#username").empty();
+                    $headerLogin.show();
+                    $headerRegister.show();
+                    $headerLogout.hide();
+                }
+            }
+        });
+
+        $(".jing-tips").find(".close").click(function(){
+            $(".jing-tips").hide();
+        });
+
+    });
+
+    //退出登录
+    function logOut(){
+        var url = window.location.href;
+        window.location.href="/indexLogout.jhtml?url="+encodeURIComponent(url);
+    }
+
+</script>
+<div class="in_choice" id="commonPucCookieId" style="display:none">
+    <input type="hidden" id="sessionMid" value="0012" />
+    <a href="javascript:;" title="关闭" class="close">关闭</a>
+    <div class="wrap">
+        <div class="in_choice_txt">请选择收货地址所在街道</div>
+        <div class="in_choice_md">
+            <div class="xian"></div>
+			<span id="Province" alt="请选择省份">
+				<b class="click" >湖南省</b>
+				<ul style="height: 125px;display: none">
+                    <li><a href="javascript:;" areaid="1" alt="北京市" title="北京市">北京市</a></li>
+                    <li><a href="javascript:;" areaid="18" alt="天津市" title="天津市">天津市</a></li>
+                    <li><a href="javascript:;" areaid="35" alt="河北省" title="河北省">河北省</a></li>
+                    <li><a href="javascript:;" areaid="219" alt="山西省" title="山西省">山西省</a></li>
+                    <li><a href="javascript:;" areaid="351" alt="内蒙古自治区" title="内蒙古自治区">内蒙古自治区</a></li>
+                    <li><a href="javascript:;" areaid="465" alt="辽宁省" title="辽宁省">辽宁省</a></li>
+                    <li><a href="javascript:;" areaid="580" alt="吉林省" title="吉林省">吉林省</a></li>
+                    <li><a href="javascript:;" areaid="650" alt="黑龙江省" title="黑龙江省">黑龙江省</a></li>
+                    <li><a href="javascript:;" areaid="792" alt="上海市" title="上海市">上海市</a></li>
+                    <li><a href="javascript:;" areaid="810" alt="江苏省" title="江苏省">江苏省</a></li>
+                    <li><a href="javascript:;" areaid="926" alt="浙江省" title="浙江省">浙江省</a></li>
+                    <li><a href="javascript:;" areaid="1028" alt="安徽省" title="安徽省">安徽省</a></li>
+                    <li><a href="javascript:;" areaid="1150" alt="福建省" title="福建省">福建省</a></li>
+                    <li><a href="javascript:;" areaid="1245" alt="江西省" title="江西省">江西省</a></li>
+                    <li><a href="javascript:;" areaid="1357" alt="山东省" title="山东省">山东省</a></li>
+                    <li><a href="javascript:;" areaid="1515" alt="河南省" title="河南省">河南省</a></li>
+                    <li><a href="javascript:;" areaid="1692" alt="湖北省" title="湖北省">湖北省</a></li>
+                    <li class="active"><a href="javascript:;" areaid="1809" alt="湖南省" title="湖南省">湖南省</a></li>
+                    <li><a href="javascript:;" areaid="1946" alt="广东省" title="广东省">广东省</a></li>
+                    <li><a href="javascript:;" areaid="2089" alt="广西壮族自治区" title="广西壮族自治区">广西壮族自治区</a></li>
+                    <li><a href="javascript:;" areaid="2213" alt="海南省" title="海南省">海南省</a></li>
+                    <li><a href="javascript:;" areaid="2240" alt="重庆市" title="重庆市">重庆市</a></li>
+                    <li><a href="javascript:;" areaid="2279" alt="四川省" title="四川省">四川省</a></li>
+                    <li><a href="javascript:;" areaid="2482" alt="贵州省" title="贵州省">贵州省</a></li>
+                    <li><a href="javascript:;" areaid="2580" alt="云南省" title="云南省">云南省</a></li>
+                    <li><a href="javascript:;" areaid="2726" alt="西藏自治区" title="西藏自治区">西藏自治区</a></li>
+                    <li><a href="javascript:;" areaid="2807" alt="陕西省" title="陕西省">陕西省</a></li>
+                    <li><a href="javascript:;" areaid="2925" alt="甘肃省" title="甘肃省">甘肃省</a></li>
+                    <li><a href="javascript:;" areaid="3026" alt="青海省" title="青海省">青海省</a></li>
+                    <li><a href="javascript:;" areaid="3078" alt="宁夏回族自治区" title="宁夏回族自治区">宁夏回族自治区</a></li>
+                    <li><a href="javascript:;" areaid="3106" alt="新疆维吾尔自治区" title="新疆维吾尔自治区">新疆维吾尔自治区</a></li>
+                    <li><a href="javascript:;" areaid="3219" alt="台湾省" title="台湾省">台湾省</a></li>
+                    <li><a href="javascript:;" areaid="3292" alt="香港特别行政区" title="香港特别行政区">香港特别行政区</a></li>
+                    <li><a href="javascript:;" areaid="3314" alt="澳门特别行政区" title="澳门特别行政区">澳门特别行政区</a></li>
+                </ul>
+				<input type="hidden" name="cho_Province1" value="请选择省份">
+			</span>
+			<span id="City" alt="请选择市区">
+				<b>请选择市区</b>
+				<ul style="height: 125px;"></ul>
+				<input type="hidden" name="cho_City" value="请选择市区">
+			</span>
+			<span id="Area" alt="请选择地区">
+				<b>请选择地区</b>
+				<ul style="height: 125px;"></ul>
+				<input type="hidden" name="cho_Area" value="请选择地区">
+			</span>
+			<span id="Street" alt="请选择街道" class="hidden">
+				<b>请选择街道</b>
+				<ul style="height: 125px;"></ul>
+				<input type="hidden" name="cho_Street" value="请选择街道">
+			</span>
+        </div>
+        <div class="hours-red2"></div>
+        <div class="psfw"></div>
+        <div class="go">
+            <input type="hidden" id="selectAreaId" value=""/>
+            <span><a class="go_shoping" href="javascript:;">开启购物之旅</a></span>
+            <a class="select_default" href="javascript:;">随便看看</a>
+        </div>
+    </div>
+</div>
+<div class="jing-tips hidden"><div><a href="javascript:;" class="close">x</a><font color="red">生源闪购对郴州市内地址，采取就近门店配送原则，请正确选择您的配送街道，以确保您购买的商品能及时送到您手中，感谢您的配合。</font></div></div>
+<div class="clear"></div>
+<div class="header" id="floatXtopBg">
+    <div class="header-wrap">
+        <div class="left">
+            <div class="login-reg">
+                Hi, <a href="/member/index.jhtml" id="username"></a>欢迎来生源闪购！
+                <a href="login.html" id="headerLogin">请登录</a>
+                <a href="register.html" id="headerRegister">免费注册</a>
+                <a href="javascript:logOut();" style="display: none;" id="headerLogout">退出</a><i>配送至：</i>
+            </div>
+            <div class="add-wrap">
+                <span id="add"></span>
+                <a href="javascript:;"><i></i>当前没有选中配送地址</a>
+                <div class="navgaline"></div>
+                <div class="add-wrapper">
+                    <div class="select-address">
+                        <ul id="address">
+                            <li class="other_addr"><label></label><a style="cursor:pointer;">送到其他地址</a></li>
+                        </ul>
+
+                    </div>
+                    <div class="choice-add" id="divOne_1">
+                        <div class="xian"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="serv_dian">服务门生：生源Smile精品店</div>
+        </div>
+        <div class="right">
+            <ul>
+                <li><a href="/member/order/list.jhtml">我的订单</a></li>
+                <li class="myhome">
+                    <a href="/member/index.jhtml"><i></i>我的生源闪购</a>
+                    <div class="my-home">
+                        <a href="/member/favorite/list.jhtml">我的收藏</a>
+                        <a href="/member/coupon_code/list.jhtml">我的优惠券</a>
+                        <a href="/member/point_record/list.jhtml">我的闪豆</a>
+                        <a href="/member/receiver/list.jhtml">我的收货地址</a>
+                    </div>
+                </li>
+                <li class="phone">
+                    <a href="/index/phoneDownLoad.jhtml">手机版</a>
+                    <div class="ph-one"><img src="../images/weixin.gif"><br>随时看 随地逛</div>
+                    <div class="navgaline"></div>
+                </li>
+                <li class="naviga">
+                    <a href="#"><i></i>网站导航</a>
+                    <div class="navigation">
+                        <div class="naviga-hot">
+                            <h1>热门推荐</h1>
+                            <div>
+                                <a href="/sub/CSJhTFCQBJ.jhtml">买赠专区</a>
+                                <a href="/sub/DzmI9iUxK9lE.jhtml">生鲜精品惠</a>
+                                <a href="/sub/e13dy9jJAu7.jhtml">食品安全惠</a>
+                                <a href="/sub/LKAjIhFm01.jhtml">家庭生活惠</a>
+                            </div>
+                        </div>
+                        <div class="naviga-channel">
+                            <h1>特色频道</h1>
+                            <div>
+								<span>
+									<a href="/sub/2A2PvDDQ5ub.jhtml">每日鲜</a>
+									<a href="/sub/EIkIJlJHMvtu.jhtml">量贩式</a> 
+									<a href="/sub/n846FjPaYYe.jhtml">名酒汇</a>
+								</span>
+								<span>
+									<a href="/sub/QQBk3HYeFBuB.jhtml">特产专区</a>
+									<!--<a href="#">品牌街</a>-->
+								</span>
+                            </div>
+                        </div>
+                        <div class="naviga-service">
+                            <h1>服务指南</h1>
+                            <div>
+                                <a id="showCityBtn" href="/article/list/3.jhtml">购物指南</a>
+                                <a href="/article/list/4.jhtml">服务方式</a>
+                                <a href="/article/list/5.jhtml">配送方式</a>
+                                <a href="/article/list/6.jhtml">售后服务</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="navgaline"></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div><div class="in-top">
+    <div class="in-top-wrap">
+        <div class="in-top-t">
+            <div class="logo">
+                <!--2016动画开始-->
+                <div class="logif"></div>
+                <!--2016动画结束-->
+                <a href="/"><img src="../images/logo.jpg" /></a>
+            </div>
+            <div class="rsea">
+                <div class="seach">
+                    <div class="keyword search_result_pop"></div>
+                    <form action="/product/search.jhtml" id="submitForm" name="submitForm" method="get">
+                        <input type="hidden" name="categoryId" id="search_category" />
+                        <div class="seachbj">
+                            <span><input name="搜索" type="button" id="search_keyword" value="搜索"></span>
+                            <input name="keyword" id="keyword" type="text" value="请输入您要购买的商品名称..."  autocomplete="off" />
+                        </div>
+                    </form>
+                    <div class="seach—hot">
+                        <a href="javascript:;" onclick="location.href='/product/search.jhtml?keyword=%E5%B7%A7%E5%85%8B%E5%8A%9B'">巧克力</a>
+                        <a href="javascript:;" onclick="location.href='/product/search.jhtml?keyword=%E5%95%A4%E9%85%92'">啤酒</a>
+                        <a href="javascript:;" onclick="location.href='/product/search.jhtml?keyword=%E5%A5%B6%E7%B2%89'">奶粉</a>
+                        <a href="javascript:;" onclick="location.href='/product/search.jhtml?keyword=%E7%89%9B%E5%A5%B6'">牛奶</a>
+                        <a href="javascript:;" onclick="location.href='/product/search.jhtml?keyword=%E5%8F%AF%E4%B9%90'">可乐</a>
+                        <a href="javascript:;" onclick="location.href='/product/search.jhtml?keyword=%E8%B0%83%E5%92%8C%E6%B2%B9'">调和油</a>
+                        <a href="javascript:;" onclick="location.href='/product/search.jhtml?keyword=%E6%B4%97%E5%8F%91%E6%B0%B4'">洗发水</a>
+                        <a href="javascript:;" onclick="location.href='/product/search.jhtml?keyword=%E6%B2%90%E6%B5%B4%E9%9C%B2'">沐浴露</a>
+                        <a href="javascript:;" onclick="location.href='/product/search.jhtml?keyword=%E7%89%99%E8%86%8F'">牙膏</a>
+                        <a href="javascript:;" onclick="location.href='/product/search.jhtml?keyword=%E6%B4%97%E8%A1%A3%E6%B6%B2'">洗衣液</a>
+                        <a href="javascript:;" onclick="location.href='/product/search.jhtml?keyword=%E7%BA%B8%E5%B7%BE'">纸巾</a>
+                        <a href="javascript:;" onclick="location.href='/product/search.jhtml?keyword=%E5%8D%AB%E7%94%9F%E5%B7%BE'">卫生巾</a>
+                        <a href="javascript:;" onclick="location.href='/product/search.jhtml?keyword=%E5%9E%83%E5%9C%BE%E8%A2%8B'">垃圾袋</a>
+                    </div>
+                </div>
+                <div class="cart"><i id="cartCount"></i><a href="/cart/list.jhtml" >我的购物车</a></div>
+            </div>
+        </div>
+        <div class="in-top-b">
+            <div class="top-nav" id="Jsort" ><i></i><span>全部商品分类</span>
+                <div class="sub-nav" id="sortList" style="display:none;">
+                    <ul>
+                        <li class="menus1 per-menu1">
+                            <h3>
+                                <a href="htsc.html" target="_blank" id="h30">海淘商城</a>
+                            </h3>
+                            <div class="xl">
+                                <a href="#" title="奶粉">奶粉</a>
+                                <a href="#" title="宝宝食品">宝宝食品</a>
+                                <a href="#" title="宝宝洗护">宝宝洗护</a>
+                            </div>
+
+                            <div class="dorpmenu sub-menu1">
+                                <div class="dorpmenubj">
+                                    <!--子类内容-->
+                                    <div class="dorpmenu-left">
+                                        <dl>
+                                            <dt><a href="/product/query.jhtml?pcId=1611" >奶粉</a></dt>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1621" >PRE奶粉</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1622" >1段奶粉</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1623" >2段奶粉</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1624" >3段奶粉</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1680" >4段奶粉</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1708" >5段奶粉</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1625" >1+段奶粉</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1626" >2+段奶粉</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1627" >成人奶粉</a>
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><a href="/product/query.jhtml?pcId=1612" >宝宝食品</a></dt>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1628" >肉泥</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1629" >果泥</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1630" >米粉</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1631" >维生素钙铁锌</a>
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><a href="/product/query.jhtml?pcId=1613" >宝宝洗护</a></dt>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1632" >洗发沐浴</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1633" >宝宝护肤</a>
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><a href="/product/query.jhtml?pcId=1614" >宝宝用品</a></dt>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1634" >纸尿裤</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1635" >耳温枪</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1636" >奶瓶奶嘴</a>
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><a href="/product/query.jhtml?pcId=1615" >美妆护肤</a></dt>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1683" >护手霜</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1667" >眼霜</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1637" >洁面</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1638" >爽肤</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1639" >面部精华</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1640" >面膜</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1641" >乳液</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1642" >面霜</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1643" >防晒霜</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1679" >护肤套装</a>
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><a href="/product/query.jhtml?pcId=1616" >魅力彩妆</a></dt>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1644" >粉底</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1645" >睫毛膏</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1646" >眼线</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1647" >卸妆</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1648" >眉笔</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1649" >唇膏</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1650" >BB霜</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1682" >香水</a>
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><a href="/product/query.jhtml?pcId=1617" >个人护理</a></dt>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1681" >口腔洁净</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1651" >洗发护发</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1652" >沐浴润肤</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1653" >卫生巾</a>
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><a href="/product/query.jhtml?pcId=1618" >食品保健</a></dt>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1654" >儿童营养</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1655" >孕妇营养</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1656" >补血补铁</a>
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><a href="/product/query.jhtml?pcId=1619" >生活电器</a></dt>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1686" >衣物清洁</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1684" >皮衣皮裤</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1657" >净水器</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1658" >净水壶</a>
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><a href="/product/query.jhtml?pcId=1620" >厨房用具</a></dt>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1659" >厨房锅具</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1660" >炒锅</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1661" >刀具</a>
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><a href="/product/query.jhtml?pcId=1730" >每日特价</a></dt>
+                                        </dl>
+                                    </div>
+                                    <div class="dorpmenu-right"><a href="/product/query.jhtml?pcId=1611"  target="_blank"><img  src="http://www.shengyuan.cn/upload/image/201509/272f388b-035c-4d57-a30f-064b1a320e38.jpg" /></a></div>
+                                    <!---->
+                                </div>
+                            </div>
+                        </li>
+                        <li class="menus2 per-menu2">
+                            <h3>
+                                <a href="/product/query.jhtml?pcId=1265" target="_blank" id="h31">每日尝鲜</a>
+                            </h3>
+                            <div class="xl">
+                                <a href="/product/query.jhtml?pcId=1268" title="水果">水果</a>
+                                <a href="/product/query.jhtml?pcId=1267" title="蔬菜">蔬菜</a>
+                                <a href="/product/query.jhtml?pcId=1270" title="肉类">肉类</a>
+                            </div>
+
+                            <div class="dorpmenu sub-menu2">
+                                <div class="dorpmenubj">
+                                    <!--子类内容-->
+                                    <div class="dorpmenu-left">
+                                        <dl>
+                                            <dt><a href="/product/query.jhtml?pcId=1268" >水果</a></dt>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1564" >国产水果</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1231" >进口水果</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1282" >精选水果</a>
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><a href="/product/query.jhtml?pcId=1267" >蔬菜</a></dt>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1278" >有机蔬菜</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1234" >精品蔬菜</a>
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><a href="/product/query.jhtml?pcId=1270" >肉类</a></dt>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1271" >家畜</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1274" >家禽</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1275" >加工肉类</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1721" >野味</a>
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><a href="/product/query.jhtml?pcId=1269" >低温制品</a></dt>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1285" >低温奶制品</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1522" >汤圆</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1521" >水饺/馄饨</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1520" >速冻面食</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1561" >米酒</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1705" >其他</a>
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><a href="/product/query.jhtml?pcId=1287" >蛋、杂粮</a></dt>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1233" >蛋制品</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1209" >杂粮</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1288" >鲜蛋类</a>
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><a href="/product/query.jhtml?pcId=1485" >水产/海鲜</a></dt>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1489" >鱼类</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1487" >冰鲜丸子</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1486" >虾蟹</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1599" >贝类</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1602" >水产加工制品</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1707" >其他</a>
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><a href="/product/query.jhtml?pcId=1578" >豆制品</a></dt>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1579" >豆制品</a>
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><a href="/product/query.jhtml?pcId=1494" >熟食</a></dt>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1496" >烧烤/油炸类</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1497" >卤制类</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1598" >凉菜/酱菜</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1720" >外卖熟食</a>
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><a href="/product/query.jhtml?pcId=1543" >面包/早点</a></dt>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1544" >面包</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1713" >面点</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1714" >汤粉</a>
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><a href="/product/query.jhtml?pcId=1687" >生鲜套餐组合</a></dt>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1688" >菜类套餐</a>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                    <div class="dorpmenu-right"><a href="/product/query.jhtml?pcId=1267"  target="_blank"><img  src="http://www.shengyuan.cn/upload/image/201503/78f26819-7ead-4f63-a1e6-c32ed5a0c187.jpg" /></a></div>
+                                    <!---->
+                                </div>
+                            </div>
+                        </li>
+                        <li class="menus3 per-menu3">
+                            <h3>
+                                <a href="/product/query.jhtml?pcId=866" target="_blank" id="h32">粮油调味</a>
+                            </h3>
+                            <div class="xl">
+                                <a href="/product/query.jhtml?pcId=932" title="厨房调味">厨房调味</a>
+                                <a href="/product/query.jhtml?pcId=933" title="粮油">粮油</a>
+                                <a href="/product/query.jhtml?pcId=936" title="干货">干货</a>
+                            </div>
+
+                            <div class="dorpmenu sub-menu3">
+                                <div class="dorpmenubj">
+                                    <!--子类内容-->
+                                    <div class="dorpmenu-left">
+                                        <dl>
+                                            <dt><a href="/product/query.jhtml?pcId=932" >厨房调味</a></dt>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1197" >调味料</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1198" >调味酱</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1346" >调味油</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1515" >料酒/黄酒</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1199" >酱油</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1519" >鸡精/味精</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1200" >腐乳</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1203" >汤料</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1204" >醋</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1201" >糖</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1207" >食盐</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1699" >罐头系列</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1518" >果酱</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1205" >火锅料</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1317" >泡菜/酱菜/榨菜</a>
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><a href="/product/query.jhtml?pcId=933" >粮油</a></dt>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1208" >食用油</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1210" >大米</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1211" >挂面</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1703" >粉丝</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1702" >米粉</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1690" >面粉</a>
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><a href="/product/query.jhtml?pcId=936" >干货</a></dt>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1526" >袋装干果</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1223" >袋装海干品</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1225" >袋装菌菇类</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1222" >袋装药材、汤料</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1340" >散装南北干货</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1731" >罐装干果</a>
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><a href="/product/query.jhtml?pcId=937" >方便速食</a></dt>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1592" >粽子</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1339" >糍粑、糕点</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1229" >方便面</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1704" >方便米饭</a>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                    <div class="dorpmenu-right"><a href="/product/query.jhtml?pcId=932"  target="_blank"><img  src="http://www.shengyuan.cn/upload/image/201503/06d2274b-865a-4e83-819b-989e05bf64da.jpg" /></a></div>
+                                    <!---->
+                                </div>
+                            </div>
+                        </li>
+                        <li class="menus4 per-menu4">
+                            <h3>
+                                <a href="/product/query.jhtml?pcId=1370" target="_blank" id="h33">特产/进口商品</a>
+                            </h3>
+                            <div class="xl">
+                                <a href="/product/query.jhtml?pcId=1371" title="进口休闲食品">进口休闲</a>
+                                <a href="/product/query.jhtml?pcId=1372" title="进口粮油调味">进口粮油</a>
+                                <a href="/product/query.jhtml?pcId=1373" title="进口酒水饮品">进口酒水</a>
+                            </div>
+
+                            <div class="dorpmenu sub-menu4">
+                                <div class="dorpmenubj">
+                                    <!--子类内容-->
+                                    <div class="dorpmenu-left">
+                                        <dl>
+                                            <dt><a href="/product/query.jhtml?pcId=1371" >进口休闲食品</a></dt>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1377" >进口饼干</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1378" >进口巧克力糖果</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1379" >进口膨化</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1380" >进口坚果</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1381" >进口果冻</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1382" >进口果干</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1383" >进口曲奇</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1384" >无糖低糖系列</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1596" >进口面点/糕点</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1600" >进口米果</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1469" >肉类/海产/蔬菜类</a>
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><a href="/product/query.jhtml?pcId=1372" >进口粮油调味</a></dt>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1385" >进口米面</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1386" >进口调味酱</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1387" >进口橄榄油</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1388" >进口罐头</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1389" >进口调味粉</a>
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><a href="/product/query.jhtml?pcId=1373" >进口酒水饮品</a></dt>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1583" >洋酒</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1390" >进口饮品</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1391" >进口啤酒</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1392" >进口葡萄酒</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1468" >进口白酒</a>
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><a href="/product/query.jhtml?pcId=1374" >进口冲调</a></dt>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1396" >进口茶饮</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1395" >进口蜂蜜柚子茶</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1394" >进口咖啡</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1393" >进口其他冲饮</a>
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><a href="/product/query.jhtml?pcId=1375" >进口牛奶乳品</a></dt>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1397" >进口牛奶</a>
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><a href="/product/query.jhtml?pcId=1376" >特色/特产</a></dt>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1402" >郴州特产</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1539" >新疆特产</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1603" >江苏特产</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1706" >东北特产</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1399" >好想你干果</a>
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><a href="/product/query.jhtml?pcId=1724" >进口速冻食品</a></dt>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1725" >速冻牛排/羊排</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1726" >速冻虾蟹</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1727" >速冻火锅丸子类</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1728" >其他速冻商品</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1729" >速冻鱼类</a>
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><a href="/product/query.jhtml?pcId=1746" >进口婴儿奶粉</a></dt>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1747" >1段奶粉</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1748" >2段奶粉</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1749" >3段奶粉</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1750" >4段奶粉</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1751" >1+段奶粉</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1752" >2+段奶粉</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1753" >PRE段奶粉</a>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                    <div class="dorpmenu-right"><a href="/product/query.jhtml?pcId=1371"  target="_blank"><img  src="http://www.shengyuan.cn/upload/image/201503/1172eacf-2a64-4c8f-8f3b-cc56671e1584.jpg" /></a></div>
+                                    <!---->
+                                </div>
+                            </div>
+                        </li>
+                        <li class="menus5 per-menu5">
+                            <h3>
+                                <a href="/product/query.jhtml?pcId=860" target="_blank" id="h34">食品饮料</a>
+                            </h3>
+                            <div class="xl">
+                                <a href="/product/query.jhtml?pcId=891" title="饼干糕点">饼干糕点</a>
+                                <a href="/product/query.jhtml?pcId=892" title="蜜饯零食">蜜饯零食</a>
+                                <a href="/product/query.jhtml?pcId=893" title="饮料饮品">饮料饮品</a>
+                            </div>
+
+                            <div class="dorpmenu sub-menu5">
+                                <div class="dorpmenubj">
+                                    <!--子类内容-->
+                                    <div class="dorpmenu-left">
+                                        <dl>
+                                            <dt><a href="/product/query.jhtml?pcId=891" >饼干糕点</a></dt>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1319" >米果、泡芙</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1341" >沙琪玛</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1342" >饼干（杯）</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1343" >饼干（卷）</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1350" >饼干（夹心）</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1354" >饼干（棒）</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=954" >饼干</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=955" >传统糕饼</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=957" >蛋糕</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=958" >威化</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=959" >曲奇</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=960" >派</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=961" >蛋卷</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=962" >面包</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1608" >单个/盒装月饼</a>
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><a href="/product/query.jhtml?pcId=892" >蜜饯零食</a></dt>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1344" >膨化食品</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=970" >枣</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=968" >梅子</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=967" >肉干肉松</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=964" >薯片</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=963" >熟食小吃</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1351" >海苔</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1573" >槟榔</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=966" >其他蜜饯</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=965" >其他小食</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1574" >禽类小食</a>
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><a href="/product/query.jhtml?pcId=893" >饮料饮品</a></dt>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1562" >醋饮料</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=971" >果汁</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=972" >即饮茶</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=973" >碳酸饮料</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=974" >水</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=975" >罐头、八宝粥</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=976" >功能饮料</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=977" >咖啡饮料</a>
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><a href="/product/query.jhtml?pcId=895" >冲饮谷物</a></dt>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=984" >麦片谷物</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=985" >成人奶粉</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=986" >冲饮奶茶</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=987" >其他营养品</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=988" >豆奶粉</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=989" >芝麻糊</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1352" >果味冲饮</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1581" >蜂蜜/柚子茶</a>
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><a href="/product/query.jhtml?pcId=894" >糖果/巧克力</a></dt>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=978" >硬糖</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=979" >巧克力</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=980" >口香糖</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=981" >果冻、布丁</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1502" >奶糖</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=983" >软糖</a>
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><a href="/product/query.jhtml?pcId=897" >牛奶乳品</a></dt>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=997" >果味奶</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=998" >纯牛奶</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1507" >植物蛋白奶</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1000" >儿童奶</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1001" >酸奶</a>
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><a href="/product/query.jhtml?pcId=898" >咖啡茶饮</a></dt>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1580" >花茶</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1511" >乌龙茶</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1003" >绿茶</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1509" >黑茶</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1353" >红茶</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1510" >普洱茶</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1512" >袋泡茶</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1004" >速溶咖啡</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1009" >咖啡伴侣</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1665" >白茶</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1666" >保健茶</a>
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><a href="/product/query.jhtml?pcId=896" >酒类商城</a></dt>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1542" >礼盒酒</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=992" >白酒</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=993" >果味酒</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=994" >啤酒</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=995" >葡萄酒</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=996" >滋补酒</a>
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><a href="/product/query.jhtml?pcId=899" >坚果炒货</a></dt>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1010" >瓜子、花生</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1013" >开心果</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1012" >核桃</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1499" >杏仁/腰果</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1500" >碧根果、夏威夷果</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1501" >坚果礼盒</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1011" >其他坚果</a>
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><a href="/product/query.jhtml?pcId=1498" >散装休闲食品</a></dt>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1609" >散装月饼</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1540" >散装果冻</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1506" >散装饼干/糕点</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1505" >散装糖果/巧克力</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1504" >散装果脯/蜜饯</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1503" >散装熟食</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1541" >散装坚果</a>
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><a href="/product/query.jhtml?pcId=1735" >滋补保健</a></dt>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1738" >综合保健品</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1737" >中草药</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1736" >阿胶膏方</a>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                    <div class="dorpmenu-right"><a href="/product/query.jhtml?pcId=897"  target="_blank"><img  src="http://www.shengyuan.cn/upload/image/201503/a1c3f7ce-52af-4551-899d-30a1a38a66cc.jpg" /></a></div>
+                                    <!---->
+                                </div>
+                            </div>
+                        </li>
+                        <li class="menus6 per-menu6">
+                            <h3>
+                                <a href="/product/query.jhtml?pcId=863" target="_blank" id="h35">个人护理</a>
+                            </h3>
+                            <div class="xl">
+                                <a href="/product/query.jhtml?pcId=911" title="面部护理">面部护理</a>
+                                <a href="/product/query.jhtml?pcId=1547" title="美容护理">美容护理</a>
+                                <a href="/product/query.jhtml?pcId=912" title="洗发护发">洗发护发</a>
+                            </div>
+
+                            <div class="dorpmenu sub-menu6">
+                                <div class="dorpmenubj">
+                                    <!--子类内容-->
+                                    <div class="dorpmenu-left">
+                                        <dl>
+                                            <dt><a href="/product/query.jhtml?pcId=911" >面部护理</a></dt>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1078" >乳液面霜</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1079" >洗面奶</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1080" >面膜</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1081" >润唇膏</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1085" >防晒美白</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1084" >护手霜</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1570" >护肤套装</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1086" >爽肤水</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1087" >眼部护理</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1559" >身体护肤品</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1554" >香水</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1601" >其它护理</a>
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><a href="/product/query.jhtml?pcId=1547" >美容护理</a></dt>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1553" >彩妆用品</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1552" >发饰品</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1551" >浴用饰品</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1550" >指甲用具</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1549" >梳/镜</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1548" >其他美容用品</a>
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><a href="/product/query.jhtml?pcId=912" >洗发护发</a></dt>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1089" >洗发水</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1091" >护发</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1092" >染发剂</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1093" >洗护套装</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1094" >防脱护理系列</a>
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><a href="/product/query.jhtml?pcId=913" >口腔护理</a></dt>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1096" >牙膏</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1097" >牙刷/牙线/牙贴</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1098" >漱口水</a>
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><a href="/product/query.jhtml?pcId=914" >女士护理</a></dt>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1100" >卫生巾</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1102" >棉条护垫</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1588" >其他女士护理用品</a>
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><a href="/product/query.jhtml?pcId=915" >沐浴用品</a></dt>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1105" >沐浴露</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1106" >香皂</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1107" >洗手液</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1108" >花露水</a>
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><a href="/product/query.jhtml?pcId=916" >男士护理</a></dt>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1110" >男士洁面</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1113" >男士面霜/露</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1114" >男士爽肤水</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1115" >男士护肤套装</a>
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><a href="/product/query.jhtml?pcId=917" >成人用品</a></dt>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1116" >避孕套</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1745" >测孕工具</a>
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><a href="/product/query.jhtml?pcId=1475" >进口个人护理</a></dt>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1480" >进口面部护理</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1479" >进口洗发、护发</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1478" >进口沐浴用品</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1535" >进口口腔护理</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1476" >进口卫生巾、护垫</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1534" >进口其它护理</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1533" >进口成人用品</a>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                    <div class="dorpmenu-right"><a href="/product/query.jhtml?pcId=912"  target="_blank"><img  src="http://www.shengyuan.cn/upload/image/201503/6fb974e8-da5e-4eed-a913-d104e3f8c7d7.jpg" /></a></div>
+                                    <!---->
+                                </div>
+                            </div>
+                        </li>
+                        <li class="menus7 per-menu7">
+                            <h3>
+                                <a href="/product/query.jhtml?pcId=864" target="_blank" id="h36">母婴用品</a>
+                            </h3>
+                            <div class="xl">
+                                <a href="/product/query.jhtml?pcId=919" title="宝宝用品">宝宝用品</a>
+                                <a href="/product/query.jhtml?pcId=920" title="玩具乐器">玩具乐器</a>
+                                <a href="/product/query.jhtml?pcId=921" title="婴儿奶粉">婴儿奶粉</a>
+                            </div>
+
+                            <div class="dorpmenu sub-menu7">
+                                <div class="dorpmenubj">
+                                    <!--子类内容-->
+                                    <div class="dorpmenu-left">
+                                        <dl>
+                                            <dt><a href="/product/query.jhtml?pcId=919" >宝宝用品</a></dt>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1565" >新生儿纸尿裤/片</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1566" >S纸尿裤/片</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1567" >M纸尿裤/片</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1568" >L纸尿裤/片</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1569" >XL纸尿裤/片</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1595" >成人纸尿裤</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1589" >卫生护理</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1587" >婴儿护肤</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1585" >爽身粉</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1122" >奶瓶</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1123" >奶嘴</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1572" >奶瓶餐具清洁</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1591" >牙胶餐具</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1590" >孕妈专区</a>
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><a href="/product/query.jhtml?pcId=920" >玩具乐器</a></dt>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1133" >遥控/电动</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1134" >模型玩具</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1135" >早教益智</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1137" >积木拼插</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1138" >娃娃玩偶</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1139" >动漫周边</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1141" >毛绒玩具</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1142" >乐器相关</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1143" >户外玩具</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1571" >摇铃/床铃</a>
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><a href="/product/query.jhtml?pcId=921" >婴儿奶粉</a></dt>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1147" >1段奶粉</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1146" >2段奶粉</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1145" >3段奶粉</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1149" >4段奶粉</a>
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><a href="/product/query.jhtml?pcId=923" >宝宝辅食</a></dt>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1160" >米粉</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1161" >面条</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1162" >果蔬肉泥</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1734" >宝宝零食</a>
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><a href="/product/query.jhtml?pcId=924" >营养专区</a></dt>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1163" >清火类幼儿益生菌</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1723" >综合营养</a>
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><a href="/product/query.jhtml?pcId=1482" >妈妈奶粉</a></dt>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1483" >孕妇奶粉</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1484" >女士奶粉</a>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                    <div class="dorpmenu-right"><a href="/product/query.jhtml?pcId=921"  target="_blank"><img  src="http://www.shengyuan.cn/upload/image/201503/74fedc98-9267-4640-8d09-62bf9779d03a.jpg" /></a></div>
+                                    <!---->
+                                </div>
+                            </div>
+                        </li>
+                        <li class="menus8 per-menu8">
+                            <h3>
+                                <a href="/product/query.jhtml?pcId=867" target="_blank" id="h37">家庭清洁</a>
+                            </h3>
+                            <div class="xl">
+                                <a href="/product/query.jhtml?pcId=941" title="衣物清洁护理">衣物清洁</a>
+                                <a href="/product/query.jhtml?pcId=942" title="家庭清洁护理">家庭清洁</a>
+                                <a href="/product/query.jhtml?pcId=943" title="清洁用具">清洁用具</a>
+                            </div>
+
+                            <div class="dorpmenu sub-menu8">
+                                <div class="dorpmenubj">
+                                    <!--子类内容-->
+                                    <div class="dorpmenu-left">
+                                        <dl>
+                                            <dt><a href="/product/query.jhtml?pcId=941" >衣物清洁护理</a></dt>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1235" >洗衣液</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1236" >洗衣粉</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1237" >衣物护理</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1238" >洗衣皂</a>
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><a href="/product/query.jhtml?pcId=942" >家庭清洁护理</a></dt>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1240" >其他清洁护理</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1241" >洗洁精</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1242" >空气清新</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1243" >洁厕用品</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1244" >油污清洁剂</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1245" >驱虫用品</a>
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><a href="/product/query.jhtml?pcId=943" >清洁用具</a></dt>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1247" >拖把/扫把/垃圾铲</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1249" >家务手套</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1248" >卫浴用品</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1250" >晒衣架/叉</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1546" >桶/盆/筛/水瓢</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1246" >清洁配件</a>
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><a href="/product/query.jhtml?pcId=944" >纸制品</a></dt>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1251" >抽纸</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1252" >卷纸</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1253" >手帕纸</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1254" >湿巾</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1255" >厨房用纸</a>
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><a href="/product/query.jhtml?pcId=945" >一次性用品</a></dt>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1256" >保鲜膜/袋/锡纸</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1257" >一次性杯</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1258" >一次性其他用品</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1259" >一次性餐具</a>
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><a href="/product/query.jhtml?pcId=1470" >进口家庭清洁</a></dt>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1474" >衣物清洁护理</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1472" >家庭清洁护理</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1471" >进口其它清洁护理</a>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                    <div class="dorpmenu-right"><a href="/product/query.jhtml?pcId=942"  target="_blank"><img  src="http://www.shengyuan.cn/upload/image/201503/a5208a3e-0ae9-4a8a-8bef-c512a1a6b3d8.jpg" /></a></div>
+                                    <!---->
+                                </div>
+                            </div>
+                        </li>
+                        <li class="menus9 per-menu9">
+                            <h3>
+                                <a href="/product/query.jhtml?pcId=862" target="_blank" id="h38">家居用品</a>
+                            </h3>
+                            <div class="xl">
+                                <a href="/product/query.jhtml?pcId=904" title="家纺日用品">家纺日用</a>
+                                <a href="/product/query.jhtml?pcId=908" title="床上用品">床上用品</a>
+                                <a href="/product/query.jhtml?pcId=905" title="餐具水杯">餐具水杯</a>
+                            </div>
+
+                            <div class="dorpmenu sub-menu9">
+                                <div class="dorpmenubj">
+                                    <!--子类内容-->
+                                    <div class="dorpmenu-left">
+                                        <dl>
+                                            <dt><a href="/product/query.jhtml?pcId=904" >家纺日用品</a></dt>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1675" >围巾/手套/耳套/护膝</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1732" >鞋垫</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1597" >泳圈/泳衣泳裤</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1047" >内衣/内裤</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1044" >睡衣</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1045" >拖鞋</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1046" >袜子</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1048" >晴/雨伞</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1049" >毛巾浴巾</a>
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><a href="/product/query.jhtml?pcId=908" >床上用品</a></dt>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1481" >电热毯</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1069" >枕头</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1071" >被子</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1073" >抱枕/靠垫/座垫</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1560" >凉席</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1584" >蚊帐</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1662" >毯子</a>
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><a href="/product/query.jhtml?pcId=905" >餐具水杯</a></dt>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1053" >水具/茶具</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1052" >餐桌器具</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1054" >陶瓷餐具</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1055" >保鲜餐具</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1050" >水杯</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1051" >保温水壶/杯</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1057" >套装餐具</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1545" >果篮/果盘</a>
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><a href="/product/query.jhtml?pcId=906" >厨具工具</a></dt>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1537" >汤煲</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1060" >炒锅</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1064" >压力锅</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1062" >奶锅、蒸锅、煎锅</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1059" >其它烹调用具</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1061" >厨房配件</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1663" >烧烤用具</a>
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><a href="/product/query.jhtml?pcId=907" >家居五金</a></dt>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1586" >风扇</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1576" >驱蚊用品</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1577" >电吹风</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1555" >灯具</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1538" >温度/湿度仪</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1065" >电池/充电器</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1066" >插线板/插座</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1067" >转换器</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1582" >取暖电器</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1740" >检测维修</a>
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><a href="/product/query.jhtml?pcId=909" >收纳整理</a></dt>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1605" >地垫</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1556" >家居整理、置物架</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1074" >收纳系列、压缩袋</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1075" >其他工具（洗衣袋、粘钩）</a>
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><a href="/product/query.jhtml?pcId=1321" >文具用品</a></dt>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1607" >书包/背包</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1606" >文具礼盒</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1604" >笔记本、练习本</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1325" >票据</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1333" >笔、筒</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1334" >夹、袋、包</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1335" >针、尺、刀</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1337" >计算器</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1338" >涂改</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1336" >其他办公用品</a>
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><a href="/product/query.jhtml?pcId=1322" >体育用品</a></dt>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1326" >羽毛球</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1328" >跳绳</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1329" >篮球</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1330" >护件</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1331" >乒乓球</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1332" >其他体育用品</a>
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><a href="/product/query.jhtml?pcId=1691" >中国银都</a></dt>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1692" >纯银手镯</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1693" >美美饰品</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1694" >宝宝饰品</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1695" >纯银保健杯</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1696" >纯银餐具</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1697" >纯银茶具</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1698" >纯银酒具</a>
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><a href="/product/query.jhtml?pcId=1323" >影像、图文</a></dt>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1324" >碟片</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1327" >书籍</a>
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><a href="/product/query.jhtml?pcId=1593" >礼品（喜品）</a></dt>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1678" >储值卡/会员卡</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1594" >盆栽</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1689" >节日喜品</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1739" >悬挂装饰品</a>
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><a href="/product/query.jhtml?pcId=1669" >生源百货</a></dt>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1670" >男女服装、鞋</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1673" >美容护肤</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1672" >珠宝首饰</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1722" >饰品</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1671" >箱包</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1710" >围巾/手套/耳套/护膝/帽子</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1733" >手机配饰</a>
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><a href="/product/query.jhtml?pcId=1717" >鑫达银业</a></dt>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1718" >水杯</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="/product/query.jhtml?pcId=1719" >打火机</a>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                    <div class="dorpmenu-right"><a href="/product/query.jhtml?pcId=908"  target="_blank"><img  src="http://www.shengyuan.cn/upload/image/201503/baeb72e5-294e-48d8-9387-f266f50fe478.jpg" /></a></div>
+                                    <!---->
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="top-menu">
+                <ul>
+                    <li>
+                        <a href="#">
+                            首页
+                        </a>
+                    </li>
+                    <li>
+                        <a href="htsc.html" target="_blank">
+                            海淘商城
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/sub/XQB0VeAwass.jhtml" target="_blank">
+                            每日尝鲜
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/product/query.jhtml?pcId=1691" target="_blank">
+                            中国银都
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/sub/hRkdLmXiWQqp.jhtml" target="_blank">
+                            秒杀专区
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/sub/qaDSTCNTnx.jhtml">
+                            闪购积分
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 右边浮动层 -->
+<div class="roll-right" style="height:777px;">
+    <div class="mui-mbar" style="height:777px;  right:-322px;">
+        <div class="mui-mbar-plugins" style="height:100%; visibility:visible; padding-bottom:85px; display:block;">
+            <!-- 标题 -->
+            <div class="mui-plugins-top clearfix">
+                <span>购物车</span>
+                <a class="tm-mcCartBtn"><span></span></a>
+                <div class="clear"></div>
+            </div>
+            <div class="tm-mcList" ></div>
+            <!-- 结算按钮 -->
+            <div class="tm-mcHandler">
+                <div class="tm-mcCashier-wrap">
+                    <div class="tm-mcTotal clearfix">
+                        <h3>
+                            <span  class="tm-mcCheckedNum"></span>
+                            <span>件商品</span>
+                        </h3>
+                        <span class="tm-mcTotalFeeWrap"></span>
+                    </div>
+                    <div class="tm-mcCashier">
+                        <a class="tm-mcnullCart">去购物车结算 </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 右边显示 -->
+    <div class="mui-mbar-tabs">
+        <div class="mui-mbar-tabs-mask">
+            <!--售前咨询-->
+            <div class="mui-mbar-tab mui-mbar-tab-qian">
+                <div id="preSalesQQ" class="mui-mbar-tab-logo mui-mbar-tab-logo-qian">
+                    <div class="mui-mbar-tab-tip" style="right:40px; display:none;">
+                        <li><a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2127884435&site=qq&menu=yes">售前客服：生生</a></li>
+                        <li><a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=3512699696&site=qq&menu=yes">售前客服：源源</a></li>
+                        <div class="mui-mbar-arr mui-mbar-tab-tip-arr">◆</div>
+                    </div></div>
+            </div>
+            <!--售后咨询-->
+            <div class="mui-mbar-tab">
+                <div id="afterSalesQQ" class="mui-mbar-tab-logo mui-mbar-tab-logo-hou">
+                    <div class="mui-mbar-tab-tip" style="right:40px; display:none;">
+                        <li><a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=484558336&site=qq&menu=yes">售后客服：闪闪</a></li>
+                        <li><a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=484396397&site=qq&menu=yes">售后客服：购购</a></li>
+                        <div class="mui-mbar-arr mui-mbar-tab-tip-arr">◆</div>
+                    </div></div>
+            </div>
+            <!-- 购物车  -->
+            <div class="mui-mbar-tab mui-mbar-tab-cart" style="top:0;margin:15px 0;">
+                <div class="mui-mbar-tab-logo mui-mbar-tab-logo-cart"></div>
+                <div class="mui-mbar-tab-txt">购物车</div>
+                <div class="total-num-box">
+                    <b id="viewCartCount" class="total-num">0</b>
+					<span class="total-num-bg-box">
+						<em></em>
+						<i></i>     
+					</span>
+                </div>
+            </div>
+
+            <!-- 返回顶部  -->
+            <div class="mui-mbar-tab  mui-mbar-tab-backtop  mui-mbar-tab-hover roll_top" style=" bottom:0;position:absolute;">
+                <div class="mui-mbar-tab-logo mui-mbar-tab-logo-btop">
+                    <div class="mui-mbar-tab-tip" style="right:40px;display:none;">
+                        返回顶部 <div class="mui-mbar-arr mui-mbar-tab-tip-arr">◆</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 右边购物车浮动层--结束---->
+
+<!--------------------------------------banner开始--------------------------------------------->
+<div class="clear"></div>
+<div class="banner">
+    <div class="banner-wrapper">
+        <a class="theon"  href="javascript:prev();"></a>
+        <a class="thedown"  href="javascript:next();"></a>
+        <!----------秒杀--------->
+        <div class="banner-content">
+            <div class="panicbuy">
+                <div class="panictime"><div class="panic-time"><span id="H">00</span><em>:</em><span id="M">00</span><em>:</em><span id="S">00</span></div>距抢购<i id="startOfStop"></i></div>
+                <div class="panilist">
+                    <script type="text/javascript">loadPromotionTime('2764');</script>
+                    <ul>
+                        <li>
+                            <a href="/products/content/2116593.html?t=091708" title="国产红蛇果（1000g）" target="_blank"><img class="lazyload_img" src="/resources/images/tm_bg.png"  data-original="http://www.shengyuan.cn/upload/image/201512/9fb68ae7-0cc1-4292-bd91-a9769de1d786-thumbnail.jpg" width="130" height="130"/></a>
+                            <p title="国产红蛇果（1000g）"><a href="/products/content/2116593.html?t=091708" title="国产红蛇果（1000g）" target="_blank">国产红蛇果（1000g）</a> </p>
+                            <p>￥5.98<i>￥9.90</i></p>
+                        </li>
+                        <li>
+                            <a href="/products/content/2104610.html?t=140323" title="国产香蕉（1000g）" target="_blank"><img class="lazyload_img" src="/resources/images/tm_bg.png"  data-original="http://www.shengyuan.cn/upload/image/201409/62226a99-1832-415e-b285-7aeb024b05d4-thumbnail.jpg" width="130" height="130"/></a>
+                            <p title="国产香蕉（1000g）"><a href="/products/content/2104610.html?t=140323" title="国产香蕉（1000g）" target="_blank">国产香蕉（1000g）</a> </p>
+                            <p>￥3.98<i>￥6.00</i></p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-----------秒杀--------end-->
+    </div>
+    <!----------轮播图------------->
+    <div class="bannerbg">
+        <ul class="dabanner_bg">
+            <li style="background-image: url(http://www.shengyuan.cn/upload/image/201702/17fd50ec-58bb-4791-8dd0-518a48272c73.jpg);background-position: center center;display: block;">
+                <div class="banner-link dabanner_lj"><a href="/sub/7CXSJTUow2P.jhtml" target="_blank"></a></div>
+            </li>
+            <li style="background-image: url(http://www.shengyuan.cn/upload/image/201703/47cf4452-a7cb-40ed-a726-a40cfecd4ab1.jpg);background-position: center center;display: none;">
+                <div class="banner-link dabanner_lj"><a href="/sub/YfgePMfDnkQ.jhtml" target="_blank"></a></div>
+            </li>
+            <li style="background-image: url(http://www.shengyuan.cn/upload/image/201703/1489fca6-11a4-4fe2-9bb0-8ff383cb2301.jpg);background-position: center center;display: none;">
+                <div class="banner-link dabanner_lj"><a href="/sub/nzbzBiC1FFVc.jhtml" target="_blank"></a></div>
+            </li>
+            <li style="background-image: url(http://www.shengyuan.cn/upload/image/201703/7ff4a3ad-fa5a-4ee0-a019-83f2e7b1ffd2.jpg);background-position: center center;display: none;">
+                <div class="banner-link dabanner_lj"><a href="/sub/X1BuPDdw0Vs.jhtml" target="_blank"></a></div>
+            </li>
+            <li style="background-image: url(http://www.shengyuan.cn/upload/image/201702/f75c3e56-3ac9-4a69-8587-0d5b2b15c96c.jpg);background-position: center center;display: none;">
+                <div class="banner-link dabanner_lj"><a href="http:#" target="_blank"></a></div>
+            </li>
+            <li style="background-image: url(http://www.shengyuan.cn/upload/image/201702/abf29240-0420-4923-a657-01d450ad2e3a.jpg);background-position: center center;display: none;">
+                <div class="banner-link dabanner_lj"><a href="#" target="_blank"></a></div>
+            </li>
+        </ul>
+    </div>
+    <div class="slide-num">
+        <a class="hover" href="javascript:void(0);">•</a>
+        <a href="javascript:void(0);" class>•</a>
+        <a href="javascript:void(0);" class>•</a>
+        <a href="javascript:void(0);" class>•</a>
+        <a href="javascript:void(0);" class>•</a>
+        <a href="javascript:void(0);" class>•</a>
+    </div>
+    <!----------轮播图--结束----------->
+</div>
+<div class="clear"></div>
+<!---------------------------------------banner结束----------------------------------------------------->
+
+<!---------------------------------------main开始------------------------------------------------------->
+<div class="main">
+    <div class="big-title">
+        <!----------随机促销商品------------->
+        <div class="left-list">
+            <div class="in_four-title"><span><a title="换一批" onclick="changeProduct()">换一批</a></span>闪购聚"惠"</div>
+            <div class="in_four-pro" id="promotionProduct">
+                <dl>
+                    <dd>
+                        <a target="_blank" href="#">
+                            <img class="lazyload_img" src="../images/e0ad6cbc-eba3-400e-b2d7-8d20e9be985a-medium.jpg"
+                                 data-original="../images/e0ad6cbc-eba3-400e-b2d7-8d20e9be985a-medium.jpg" width="175" height="175"
+                                 style="display: inline">
+                        </a>
+                        <p><a href="#">乐事无限嗞嗞烤肉味...</a></p>
+                        <p>
+                            ¥7.20
+                            <i>¥8.90</i>
+                        </p>
+                    </dd>
+                    <dd>
+                        <a target="_blank" href="#">
+                            <img class="lazyload_img"
+                                 src="../images/e880bd1a-33fc-4163-91b0-9607e6b28bb0-medium.jpg"
+                                 data-original="../images/e880bd1a-33fc-4163-91b0-9607e6b28bb0-medium.jpg"
+                                 width="175" height="175" style="display: inline;">
+                        </a>
+                        <p>
+                            <a href="#">今麦郎大今野五连包...
+                            </a>
+                        </p>
+                        <p>
+                            ¥7.90
+                            <i>¥9.50</i>
+                        </p>
+                    </dd>
+                    <dd>
+                        <a target="_blank" href="#">
+                            <img class="lazyload_img" src="../images/6a7bb0af-f89f-4ecc-ba51-3b4b011818fb-medium.jpg"
+                                 data-original="../images/6a7bb0af-f89f-4ecc-ba51-3b4b011818fb-medium.jpg"
+                                 width="175" height="175" style="display: inline;">
+                        </a>
+                        <p>
+                            <a href="#">洁婷微薄日棉16片</a>
+                        </p>
+                        <p>
+                            ¥14.90
+                            <i>¥16.50</i>
+                        </p>
+                    </dd>
+                    <dd>
+                        <a target="_blank" href="#">
+                            <img class="lazyload_img"
+                                 src="../images/9d113d9d-bd57-44f8-baa2-d25ba2542b12-medium.jpg"
+                                 data-original="../images/9d113d9d-bd57-44f8-baa2-d25ba2542b12-medium.jpg"
+                                 width="175" height="175" style="display: inline;">
+                        </a>
+                        <p>
+                            <a href="#">优氏湖湘老酸奶15...</a>
+                        </p>
+                        <p>
+                            ¥3.50
+                            <i>¥5.00</i>
+                        </p>
+                    </dd>
+                    <dd>
+                        <a target="_blank" href="#">
+                            <img class="lazyload_img" src="../images/bfc232ee-1788-4e46-8733-8f466d40fd53-medium.jpg"
+                                 data-original="../images/bfc232ee-1788-4e46-8733-8f466d40fd53-medium.jpg"
+                                 width="175" height="175" style="display: inline;">
+                        </a>
+                        <p>
+                            <a href="#">乐事无限忠于原味 ...</a>
+                        </p>
+                        <p>
+                            ¥7.20
+                            <i>¥8.50</i>
+                        </p>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+        <!----------随机促销商品结束------------->
+        <!----------首页文章------------->
+        <div class="right-list">
+            <h2><i><a href="/article/list/1.jhtml" target="_blank">更多</a></i>闪购新闻</h2>
+            <ul>
+                <li><a href="/articles/content/201703/279/1.html?t=152304" target="_blank"><b>[活动促销]</b>生活加点料，多滋多味</a></li>
+                <li><a href="/articles/content/201703/278/1.html?t=114312" target="_blank"><b>[活动促销]</b>专属女人花茶季</a></li>
+                <li><a href="/articles/content/201703/277/1.html?t=142922" target="_blank"><b>[活动促销]</b>家居杂货店</a></li>
+                <li><a href="/articles/content/201703/276/1.html?t=154815" target="_blank"><b>[活动促销]</b>3.8女神节，呵护更重要的自己</a></li>
+                <li><a href="/articles/content/201703/275/1.html?t=175721" target="_blank"><b>[活动促销]</b>辣妈出行季</a></li>
+                <li><a href="/articles/content/201702/273/1.html?t=152649" target="_blank"><b>[活动促销]</b>生源一卡通</a></li>
+                <li><a href="/articles/content/201702/271/1.html?t=113928" target="_blank"><b>[活动促销]</b>生源时代广场会员管理方案</a></li>
+            </ul>
+        </div>
+        <!----------首页文章结束------------->
+    </div>
+
+    <div class="clear"></div>
+    <div class="eight-block">
+        <ul>
+            <li class="height400px"><a href="/sub/iWr1uuH4DA.jhtml" target="_blank"><img class="lazyload_img"  src="/resources/images/tm_bg.png" data-original="http://www.shengyuan.cn/upload/image/201511/5409c7fc-eabb-4400-8aba-e59ab6ef6c4d.jpg"/></a></li>
+            <li class="width400px"><a href="/sub/n846FjPaYYe.jhtml" target="_blank"><img class="lazyload_img"  src="/resources/images/tm_bg.png" data-original="http://www.shengyuan.cn/upload/image/201512/ae3a989f-9f6c-44e1-8a76-a2ec45d7406c.jpg"/></a></li>
+            <li class=""><a href="/sub/XQB0VeAwass.jhtml" target="_blank"><img class="lazyload_img"  src="/resources/images/tm_bg.png" data-original="http://www.shengyuan.cn/upload/image/201602/3f99c40f-dd76-4968-a283-617ccc7132af.jpg"/></a></li>
+            <li class=""><a href="/sub/TcVMjImuLY6.jhtml" target="_blank"><img class="lazyload_img"  src="/resources/images/tm_bg.png" data-original="http://www.shengyuan.cn/upload/image/201603/24752358-0ceb-4dc8-b82b-d9d9e45e38ca.png"/></a></li>
+            <li class="height400px float-r"><a href="/sub/QQBk3HYeFBuB.jhtml" target="_blank"><img class="lazyload_img"  src="/resources/images/tm_bg.png" data-original="http://www.shengyuan.cn/upload/image/201511/d2a8b1a4-531f-45ee-bf93-cc78efe4588c.jpg"/></a></li>
+            <li class="width400px"><a href="/sub/EIkIJlJHMvtu.jhtml" target="_blank"><img class="lazyload_img"  src="/resources/images/tm_bg.png" data-original="http://www.shengyuan.cn/upload/image/201511/09d84c0a-bb88-4979-a759-4d0cd071035b.jpg"/></a></li>
+            <li class=""><a href="/sub/e13dy9jJAu7.jhtml" target="_blank"><img class="lazyload_img"  src="/resources/images/tm_bg.png" data-original="http://www.shengyuan.cn/upload/image/201511/39f0226d-ecf4-49dc-aa88-1fc305ae45bc.jpg"/></a></li>
+            <li class=""><a href="/sub/LKAjIhFm01.jhtml" target="_blank"><img class="lazyload_img"  src="/resources/images/tm_bg.png" data-original="http://www.shengyuan.cn/upload/image/201511/277415ef-0530-4b0f-a8de-d30c905f2b64.jpg"/></a></li>
+        </ul>
+    </div>
+
+    <div class="clear"></div>
+    <!----------首页横幅广告位开始------------->
+    <!----------横幅广告位结束------------->
+    <div class="clear"></div>
+
+    <!---------------------------------------1F---------------------------------------->
+    <div class="floor" id="1F">
+        <div class="title">
+            <div class="title-txt title-six">1F 海淘商品</div>
+            <div class="tab-nav sixf-tab">
+                <ul id="adPosition1F">
+                    <li class="active" productCategoryId="1611" productCount="8"  adPositionId=158 adCount="1"><a>奶粉</a></li>
+                    <li productCategoryId="1615" productCount="8"  adPositionId=163 adCount="1"><a>美妆护肤</a></li>
+                    <li productCategoryId="1617" productCount="8"  adPositionId=169 adCount="1"><a>个人护理</a></li>
+                    <li productCategoryId="" productCount="8"  adPositionId= adCount="1"><a></a></li>
+                    <li productCategoryId="" productCount="8"  adPositionId= adCount="1"><a></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="leftnr nr-six">
+            <div class="nr-left-yuan">
+                <ul>
+                    <li><a href="#" target="_blank">奶粉</a></li>
+                    <li><a href="#" target="_blank">宝宝食品</a></li>
+                    <li><a href="#" target="_blank">宝宝洗护</a></li>
+                    <li><a href="#" target="_blank">宝宝用品</a></li>
+                    <li><a href="#" target="_blank">美妆护肤</a></li>
+                    <li><a href="#" target="_blank">魅力彩妆</a></li>
+                    <li><a href="#" target="_blank">个人护理</a></li>
+                    <li><a href="#" target="_blank">食品保健</a></li>
+                    <li><a href="#" target="_blank">生活电器</a></li>
+                    <li><a href="#" target="_blank">厨房用具</a></li>
+                    <li><a href="#" target="_blank">每日特价</a></li>
+                </ul>
+            </div>
+            <div class="gg220x275"><a href="/products/content/2115794.html?t=115733" target="_blank"><img class="lazyload_img"  src="/resources/images/tm_bg.png" data-original="http://www.shengyuan.cn/upload/image/201509/be8b1d10-2ddf-4464-bccb-0c81c33fa9cf.jpg"width="220" height="275"/></a></div>
+        </div>
+        <div class="tab-nr">
+            <ul id="1fproduct">
+                <li class="show">
+                    <div class="louf-pro-list">
+                        <dl>
+                            <dd class="height500"><i><a href="#" target="_blank"><img class="lazyload_img" src="../images/tm_bg.png" data-original="http://www.shengyuan.cn/upload/image/201509/f155d7ad-631a-42fc-9282-2c231dcadaf2.jpg" ></a></i></dd>
+                            <dd><p class="pro-title"><a href="#" target="_blank">【2罐】德国Aptamil/爱他美 婴幼儿奶粉3段（10-12个月）800g</a></p><p class="pro-sale">¥386.00</p><p class="pro-img "><a href="#" target="_blank"><img class="lazyload_img" src="../images/tm_bg.png" data-original="http://www.shengyuan.cn/upload/image/201612/b742871b-8b35-4424-b182-ff13fc35e403.jpg" width="175px" height="175px" /></a></p></dd>
+                            <dd><p class="pro-title"><a href="#" target="_blank">【临期2017-5-20特价2盒】德国Aptamil/爱他美 婴幼儿奶粉2+段（2岁以上）600g</a></p><p class="pro-sale">¥306.00</p><p class="pro-img "><a href="#" target="_blank"><img class="lazyload_img" src="../images/tm_bg.png" data-original="http://www.shengyuan.cn/upload/image/201612/ac015d58-4285-4acf-8980-8c44284b692d.jpg" width="175px" height="175px" /></a></p></dd>
+                            <dd><p class="pro-title"><a href="#" target="_blank">【2罐】澳洲爱他美Aptamil金装婴幼儿奶粉4段（2岁以上）900g</a></p><p class="pro-sale">¥369.00</p><p class="pro-img "><a href="#" target="_blank"><img class="lazyload_img" src="../images/tm_bg.png" data-original="http://www.shengyuan.cn/upload/image/201612/3aff4b72-1bce-4040-9d73-9b0d177299df.jpg" width="175px" height="175px" /></a></p></dd>
+                            <dd><p class="pro-title"><a href="#" target="_blank">【清仓，临期2017-6-13日左右】德国Aptamil/爱他美 婴幼儿奶粉PRE段（0-6个月）800g</a></p><p class="pro-sale">¥366.00</p><p class="pro-img "><a href="#" target="_blank"><img class="lazyload_img" src="../images/tm_bg.png" data-original="http://www.shengyuan.cn/upload/image/201612/36592993-4d3d-4479-ba99-06f33e9b5916.jpg" width="175px" height="175px" /></a></p></dd>
+                            <dd class="height220"><p class="pro-title"><a href="#">【清仓，临期2017-6-15日左右】德国Aptamil/爱他美 婴幼儿奶粉2段（6-10个月）800g</a></p><p class="pro-sale">¥386.00</p><p class="pro-img "><a href="#" target="_blank"><img class="lazyload_img" src="../images/tm_bg.png" data-original="http://www.shengyuan.cn/upload/image/201612/dd90732f-1f6e-45fb-ac34-2b550df6308f.jpg" width="160px" height="160px" /></a></p></dd>
+                            <dd class="height220"><p class="pro-title"><a href="#">【2罐】英国牛栏Cow&Gate婴儿奶粉2段6-12个月900克</a></p><p class="pro-sale">¥356.00</p><p class="pro-img "><a href="#" target="_blank"><img class="lazyload_img" src="../images/tm_bg.png" data-original="http://www.shengyuan.cn/upload/image/201612/93f7ab35-a0f4-4e59-bbf0-892f74b4ed45.jpg" width="160px" height="160px" /></a></p></dd>
+                        </dl>
+                    </div>
+                </li>
+                <li style="display: none"><a href="#"></a></li>
+                <li style="display: list-item;">
+                    <div class="louf-pro-list">
+                        <dl>
+                            <dd class="height500">
+                                <i>
+                                    <a href="#" target="_blank">
+                                        <img class="lazyload_img" src="../images/ce7d0595-eb14-4845-a498-97831dc7661b.jpg"
+                                             data-original="../images/ce7d0595-eb14-4845-a498-97831dc7661b.jpg" width="195" height="503"
+                                             style="display: inline;">
+                                    </a>
+                                </i>
+                            </dd>
+                            <dd><p class="pro-title">
+                                <a href="#">【3包54片】韩国EMART贵爱娘中草药无荧光剂卫生巾日用大号29cm</a></p>
+                                <p class="pro-sale">¥108.00</p>
+                                <p class="pro-img" style="margin-left: 0px;">
+                                    <a href="#"><img class="lazyload_img" src="../images/9245f3ac-9634-4eff-9d8c-5794b7278edf.jpg"
+                                                     data-original="../images/9245f3ac-9634-4eff-9d8c-5794b7278edf.jpg" width="175" height="175"
+                                                     style="display: inline;">
+                                    </a></p>
+                            </dd>
+                            <dd><p class="pro-title">
+                                <a href="#">【3盒】韩国爱茉莉Amore麦迪安86%美白牙膏去黄去牙渍白盒120g</a></p>
+                                <p class="pro-sale">¥59.00</p>
+                                <p class="pro-img" style="margin-left: 0px;">
+                                    <a href="#"><img class="lazyload_img" src="../images/2563c1dd-c1ea-4c1b-943a-f0d9a9c07efd.jpg"
+                                                     data-original="../images/2563c1dd-c1ea-4c1b-943a-f0d9a9c07efd.jpg" width="175" height="175"
+                                                     style="display: inline;">
+                                    </a>
+                                </p>
+                            </dd>
+                            <dd><p class="pro-title">
+                                <a href="#">【3盒】韩国爱茉莉Amore麦迪安86%美白牙膏去牙渍去异味红盒120g</a></p>
+                                <p class="pro-sale">¥59.00</p>
+                                <p class="pro-img">
+                                    <a href="#"><img class="lazyload_img" src="../images/dfebc032-2bfd-42c7-b623-259211b41c6e.jpg"
+                                                     data-original="../images/dfebc032-2bfd-42c7-b623-259211b41c6e.jpg" width="175" height="175"
+                                                     style="display: inline;">
+                                    </a>
+                                </p>
+                            </dd>
+                            <dd><p class="pro-title">
+                                <a href="#">德国sebamed施巴成人清爽活力保湿沐浴露200ml</a></p>
+                                <p class="pro-sale">¥49.00</p>
+                                <p class="pro-img">
+                                    <a href="#"><img class="lazyload_img" src="../images/6c7053be-e4cc-4a20-8230-995da699e891.jpg"
+                                                     data-original="../images/6c7053be-e4cc-4a20-8230-995da699e891.jpg" width="175" height="175"
+                                                     style="display: inline;">
+                                    </a>
+                                </p>
+                            </dd>
+                            <dd class="height220">
+                                <p class="pro-title">
+                                    <a href="#">德国sebamed施巴女性护理经期孕妇止痒私处清洁洗液200ml</a></p>
+                                <p class="pro-sale">¥88.00</p>
+                                <p class="pro-img">
+                                    <a href="#"><img class="lazyload_img" src="../images/f6b23acc-a289-41ee-8de4-e1e181c49502.jpg"
+                                                     data-original="../images/f6b23acc-a289-41ee-8de4-e1e181c49502.jpg" width="160" height="160"
+                                                     style="display: inline;">
+                                    </a>
+                                </p>
+                            </dd>
+                            <dd class="height220">
+                                <p class="pro-title">
+                                    <a href="#">德国facelle菲思乐日用无护翼型超薄卫生巾2滴水/16片</a>
+                                </p>
+                                <p class="pro-sale">¥28.00</p>
+                                <p class="pro-img">
+                                    <a href="#"><img class="lazyload_img" src="../images/c33c98d7-a5c6-4870-9945-48852d3d2d84.jpg"
+                                                     data-original="../images/c33c98d7-a5c6-4870-9945-48852d3d2d84.jpg" width="160" height="160"
+                                                     style="display: inline;">
+                                    </a>
+                                </p>
+                            </dd>
+                        </dl>
+                    </div>
+                </li>
+                <li style="display: none"><a href="#"></a></li>
+                <li style="display: none"><a href="#"></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <!-------------------------------------2F------------------------------------------>
+    <div class="floor" id="2F">
+        <div class="title">
+            <div class="title-txt title-one" >2F 生鲜专区</div>
+            <!----------2F广告位选项卡------------->
+            <div class="tab-nav onef-tab">
+                <ul id="adPosition2F">
+                    <li class="active" productCategoryId="1268" productCount="8"  adPositionId=121 adCount="1"><a>新鲜水果</a></li>
+                    <li productCategoryId="1267" productCount="8"  adPositionId=122 adCount="1"><a>优选蔬菜</a></li>
+                    <li productCategoryId="1269" productCount="8"  adPositionId=123 adCount="1"><a>低温制品</a></li>
+                    <li productCategoryId="1287" productCount="8"  adPositionId=124 adCount="1"><a>五谷杂粮</a></li>
+                    <li productCategoryId="1270" productCount="8"  adPositionId=125 adCount="1"><a>精品肉类</a></li>
+                </ul>
+            </div>
+            <!----------2F广告位选项卡结束------------->
+        </div>
+        <div class="leftnr nr-one">
+            <!----------2F左侧商品分类------------->
+            <div class="nr-left-yuan">
+                <ul>
+                    <li><a href="/product/query.jhtml?pcId=1268" target="_blank">水果</a></li>
+                    <li><a href="/product/query.jhtml?pcId=1267" target="_blank">蔬菜</a></li>
+                    <li><a href="/product/query.jhtml?pcId=1270" target="_blank">肉类</a></li>
+                    <li><a href="/product/query.jhtml?pcId=1269" target="_blank">低温制品</a></li>
+                    <li><a href="/product/query.jhtml?pcId=1287" target="_blank">蛋、杂粮</a></li>
+                    <li><a href="/product/query.jhtml?pcId=1485" target="_blank">水产/海鲜</a></li>
+                    <li><a href="/product/query.jhtml?pcId=1578" target="_blank">豆制品</a></li>
+                    <li><a href="/product/query.jhtml?pcId=1494" target="_blank">熟食</a></li>
+                    <li><a href="/product/query.jhtml?pcId=1543" target="_blank">面包/早点</a></li>
+                    <li><a href="/product/query.jhtml?pcId=1687" target="_blank">生鲜套餐组合</a></li>
+                </ul>
+            </div>
+            <!----------2F左侧商品分类结束------------->
+            <!----------2F左侧广告位------------->
+            <div class="gg220x275"><a href="/products/content/2104308.html?t=075145" target="_blank"><img class="lazyload_img" src="/resources/images/tm_bg.png" data-original="http://www.shengyuan.cn/upload/image/201509/ac5c7353-23ff-4b6b-9baf-ee20f82497f1.jpg" width="220" height="275"/></a></div>
+            <!----------2F左侧广告位结束------------->
+        </div>
+        <div class="tab-nr">
+            <!----------2F选项卡下商品及广告位------------->
+            <ul id="2fproduct">
+                <li class="show">
+                    <div class="louf-pro-list">
+                        <dl>
+                            <dd class="height500"><i><a href="/products/content/2104611.html?t=112829" target="_blank"><img class="lazyload_img"  src="/resources/images/tm_bg.png" data-original="http://www.shengyuan.cn/upload/image/201604/7fab5cee-dd30-4d7c-a9b3-d4da7afcdcf0.png" ></a></i></dd>
+                            <dd><p class="pro-title"><a href="http://www.shengyuan.cn/products/content/2104585.html?t=103159" target="_blank">80#红富士(1500g)</a></p><p class="pro-sale">¥20.00</p><p class="pro-img "><a href="http://www.shengyuan.cn/products/content/2104585.html?t=103159" target="_blank"><img class="lazyload_img"  src="/resources/images/tm_bg.png" data-original="http://www.shengyuan.cn/upload/image/201409/8636a356-0295-44bc-b493-204f29e2c092-medium.jpg" width="175px" height="175px" /></a></p></dd>
+                            <dd><p class="pro-title"><a href="http://www.shengyuan.cn/products/content/2104589.html?t=095430" target="_blank">黄元帅 1000g</a></p><p class="pro-sale">¥18.00</p><p class="pro-img "><a href="http://www.shengyuan.cn/products/content/2104589.html?t=095430" target="_blank"><img class="lazyload_img"  src="/resources/images/tm_bg.png" data-original="http://www.shengyuan.cn/upload/image/201410/f6d7f55f-b1df-4690-9196-d7f1d6c8b075-medium.jpg" width="175px" height="175px" /></a></p></dd>
+                            <dd><p class="pro-title"><a href="http://www.shengyuan.cn/products/content/2104604.html?t=081017" target="_blank">火龙果1000g/份</a></p><p class="pro-sale">¥12.90</p><p class="pro-img "><a href="http://www.shengyuan.cn/products/content/2104604.html?t=081017" target="_blank"><img class="lazyload_img"  src="/resources/images/tm_bg.png" data-original="http://www.shengyuan.cn/upload/image/201410/173ae88c-9de4-4688-b6ab-9cb7966e0c82-medium.jpg" width="175px" height="175px" /></a></p></dd>
+                            <dd><p class="pro-title"><a href="http://www.shengyuan.cn/products/content/2104608.html?t=085106" target="_blank">雪莲果 1000g</a></p><p class="pro-sale">¥7.90</p><p class="pro-img "><a href="http://www.shengyuan.cn/products/content/2104608.html?t=085106" target="_blank"><img class="lazyload_img"  src="/resources/images/tm_bg.png" data-original="http://www.shengyuan.cn/upload/image/201410/91c615b4-af2d-473c-9195-afa74ead58fa-medium.jpg" width="175px" height="175px" /></a></p></dd>
+                            <dd class="height220"><p class="pro-title"><a href="http://www.shengyuan.cn/products/content/2104610.html?t=140323">国产香蕉（1000g）</a></p><p class="pro-sale">¥6.00</p><p class="pro-img "><a href="http://www.shengyuan.cn/products/content/2104610.html?t=140323" target="_blank"><img class="lazyload_img"  src="/resources/images/tm_bg.png" data-original="http://www.shengyuan.cn/upload/image/201409/62226a99-1832-415e-b285-7aeb024b05d4-medium.jpg"  width="160px" height="160px" /></a></p></dd>
+                            <dd class="height220"><p class="pro-title"><a href="http://www.shengyuan.cn/products/content/2104612.html?t=081120">精品龙眼（500g/份）</a></p><p class="pro-sale">¥9.90</p><p class="pro-img "><a href="http://www.shengyuan.cn/products/content/2104612.html?t=081120" target="_blank"><img class="lazyload_img"  src="/resources/images/tm_bg.png" data-original="http://www.shengyuan.cn/upload/image/201410/e1170a5c-03fd-46d2-88d2-bedc23c01248-medium.jpg"  width="160px" height="160px" /></a></p></dd>
+                            <dd class="height220"><p class="pro-title"><a href="http://www.shengyuan.cn/products/content/2104617.html?t=081610">精品红提1000g</a></p><p class="pro-sale">¥15.90</p><p class="pro-img "><a href="http://www.shengyuan.cn/products/content/2104617.html?t=081610" target="_blank"><img class="lazyload_img"  src="/resources/images/tm_bg.png" data-original="http://www.shengyuan.cn/upload/image/201410/03b9b176-c1c8-41fb-a822-b4fb0b3cc428-medium.jpg"  width="160px" height="160px" /></a></p></dd>
+                            <dd class="height220"><p class="pro-title"><a href="http://www.shengyuan.cn/products/content/2104638.html?t=105218">金桔/500g</a></p><p class="pro-sale">¥6.90</p><p class="pro-img "><a href="http://www.shengyuan.cn/products/content/2104638.html?t=105218" target="_blank"><img class="lazyload_img"  src="/resources/images/tm_bg.png" data-original="http://www.shengyuan.cn/upload/image/201409/f7e63340-74fb-4fd0-8fc5-1707f6acbed7-medium.jpg"  width="160px" height="160px" /></a></p></dd>
+                        </dl>
+                    </div>
+                </li>
+                <li><a href="#" > </a></li>
+                <li><a href="#" > </a></li>
+                <li><a href="#" > </a></li>
+                <li><a href="#" > </a></li>
+            </ul>
+            <!----------2F选项卡下商品及广告位结束------------->
+        </div>
+    </div>
+    <div class="clear"></div>
+
+    <!-------------------------------------3F------------------------------------------>
+    <div class="floor" id="3F">
+        <div class="title">
+            <div class="title-txt title-two" >3F 粮油调味</div>
+            <div class="tab-nav twof-tab">
+                <ul id="adPosition3F">
+                    <li class="active" productCategoryId="932" productCount="5"  adPositionId=126 adCount="5"><a>厨房调味</a></li>
+                    <li productCategoryId="933" productCount="5"  adPositionId=127 adCount="5"><a>粮油</a></li>
+                    <li productCategoryId="936" productCount="5"  adPositionId=128 adCount="5"><a>干货</a></li>
+                    <li productCategoryId="937" productCount="5"  adPositionId=129 adCount="5"><a>方便速食</a></li>
+                    <li productCategoryId="" productCount="5"  adPositionId= adCount="5"><a></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="leftnr nr-two">
+            <div class="nr-left-yuan">
+                <ul>
+                    <li><a href="/product/query.jhtml?pcId=936" target="_blank">干货</a></li>
+                    <li><a href="/product/query.jhtml?pcId=937" target="_blank">方便速食</a></li>
+                    <li><a href="/product/query.jhtml?pcId=932" target="_blank">厨房调味</a></li>
+                    <li><a href="/product/query.jhtml?pcId=933" target="_blank">粮油</a></li>
+                </ul>
+            </div>
+            <div class="gg220x275"><a href="/products/content/2105569.html?t=001500" target="_blank"><img class="lazyload_img" src="/resources/images/tm_bg.png" data-original="http://www.shengyuan.cn/upload/image/201509/b5b8346d-d480-4a33-a23b-4ec91d9e81a0.jpg" width="220" height="275"/></a></div>
+        </div>
+        <div class="tab-nr">
+            <ul id="3fproduct">
+                <li class="show">
+                    <div class="louf-pro-list">
+                        <dl>
+                            <dd ><i><a href="/products/content/2105552.html?t=001500" target="_blank"><img class="lazyload_img"  src="/resources/images/tm_bg.png" data-original="http://www.shengyuan.cn/upload/image/201511/5e9de126-6984-46f4-949b-6711ed6dad8a.jpg" ></a></i></dd>
+                            <dd ><i><a href="/products/content/2105305.html?t=000000" target="_blank"><img class="lazyload_img"  src="/resources/images/tm_bg.png" data-original="http://www.shengyuan.cn/upload/image/201511/5c5fe6e0-d641-4491-bce9-cf5d7bfbe975.jpg" ></a></i></dd>
+                            <dd ><i><a href="/products/content/2106052.html?t=000000" target="_blank"><img class="lazyload_img"  src="/resources/images/tm_bg.png" data-original="http://www.shengyuan.cn/upload/image/201511/762147e0-b401-48ef-8182-e258f10190d7.jpg" ></a></i></dd>
+                            <dd ><i><a href="/products/content/2105468.html?t=000000" target="_blank"><img class="lazyload_img"  src="/resources/images/tm_bg.png" data-original="http://www.shengyuan.cn/upload/image/201511/0c6fa30e-e163-4a31-ab5b-085ba5f5f6b6.jpg" ></a></i></dd>
+                            <dd ><i><a href="/products/content/2105573.html?t=000000" target="_blank"><img class="lazyload_img"  src="/resources/images/tm_bg.png" data-original="http://www.shengyuan.cn/upload/image/201511/70aabf11-6e07-4550-a8bd-8248b7e9e473.jpg" ></a></i></dd>
+                            <dd class="height220"><p class="pro-title"><a href="http://www.shengyuan.cn/products/content/2105360.html?t=165057" target="_blank">李锦记番茄沙司340g/瓶</a></p><p class="pro-sale">¥7.90</p><p class="pro-img "><a href="http://www.shengyuan.cn/products/content/2105360.html?t=165057" target="_blank"><img class="lazyload_img"  src="/resources/images/tm_bg.png" data-original="http://www.shengyuan.cn/upload/image/201409/dc4e479a-1d24-4972-bd54-a46881ff6fe7-medium.jpg" width="160px" height="160px"/></a></p></dd>
+                            <dd class="height220"><p class="pro-title"><a href="http://www.shengyuan.cn/products/content/2105406.html?t=173200" target="_blank">陶华碧油辣椒 [275g]瓶</a></p><p class="pro-sale">¥8.50</p><p class="pro-img "><a href="http://www.shengyuan.cn/products/content/2105406.html?t=173200" target="_blank"><img class="lazyload_img"  src="/resources/images/tm_bg.png" data-original="http://www.shengyuan.cn/upload/image/201411/5d00d5ed-08d8-4b0e-9da0-60c6e69b7a15-medium.jpg" width="160px" height="160px"/></a></p></dd>
+                            <dd class="height220"><p class="pro-title"><a href="http://www.shengyuan.cn/products/content/2105418.html?t=001500" target="_blank">长康芝麻酱 瓶/248g</a></p><p class="pro-sale">¥11.90</p><p class="pro-img "><a href="http://www.shengyuan.cn/products/content/2105418.html?t=001500" target="_blank"><img class="lazyload_img"  src="/resources/images/tm_bg.png" data-original="http://www.shengyuan.cn/upload/image/201409/535cb30e-f401-4f31-8042-d096383c967b-medium.jpg" width="160px" height="160px"/></a></p></dd>
+                            <dd class="height220"><p class="pro-title"><a href="http://www.shengyuan.cn/products/content/2105407.html?t=001500" target="_blank">陶华碧牛肉末 (210g)瓶</a></p><p class="pro-sale">¥8.50</p><p class="pro-img "><a href="http://www.shengyuan.cn/products/content/2105407.html?t=001500" target="_blank"><img class="lazyload_img"  src="/resources/images/tm_bg.png" data-original="http://www.shengyuan.cn/upload/image/201411/3cec0941-624b-40ef-8fde-6f46dbff342c-medium.jpg" width="160px" height="160px"/></a></p></dd>
+                            <dd class="height220"><p class="pro-title"><a href="http://www.shengyuan.cn/products/content/2105351.html?t=001500" target="_blank">李锦记锦珍生抽500ml（瓶）</a></p><p class="pro-sale">¥5.90</p><p class="pro-img "><a href="http://www.shengyuan.cn/products/content/2105351.html?t=001500" target="_blank"><img class="lazyload_img"  src="/resources/images/tm_bg.png" data-original="http://www.shengyuan.cn/upload/image/201410/5b4537dd-7270-4f3f-b8ea-153a0574fa51-medium.jpg" width="160px" height="160px"/></a></p></dd>
+                        </dl>
+                    </div>
+                </li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="clear"></div>
+
+
+    <!------------------------------------4F------------------------------------->
+
+    <div class="floor"  id="4F">
+        <div class="title">
+            <div class="title-txt title-three" >4F 食品饮料</div>
+            <div class="tab-nav threef-tab">
+                <ul id="adPosition4F">
+                    <li class="active" productCategoryId="891" productCount="5"  adPositionId=130 adCount="5"><a>饼干糕点</a></li>
+                    <li productCategoryId="892" productCount="5"  adPositionId=131 adCount="5"><a>蜜饯零食</a></li>
+                    <li productCategoryId="894" productCount="5"  adPositionId=132 adCount="5"><a>糖果巧克力</a></li>
+                    <li productCategoryId="897" productCount="5"  adPositionId=133 adCount="5"><a>牛奶饮品</a></li>
+                    <li productCategoryId="898" productCount="5"  adPositionId=134 adCount="5"><a>咖啡茶饮</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="leftnr nr-three">
+            <div class="nr-left-yuan">
+                <ul>
+                    <li><a href="/product/query.jhtml?pcId=891" target="_blank">饼干糕点</a></li>
+                    <li><a href="/product/query.jhtml?pcId=892" target="_blank">蜜饯零食</a></li>
+                    <li><a href="/product/query.jhtml?pcId=893" target="_blank">饮料饮品</a></li>
+                    <li><a href="/product/query.jhtml?pcId=895" target="_blank">冲饮谷物</a></li>
+                    <li><a href="/product/query.jhtml?pcId=894" target="_blank">糖果/巧克力</a></li>
+                    <li><a href="/product/query.jhtml?pcId=897" target="_blank">牛奶乳品</a></li>
+                    <li><a href="/product/query.jhtml?pcId=898" target="_blank">咖啡茶饮</a></li>
+                    <li><a href="/product/query.jhtml?pcId=896" target="_blank">酒类商城</a></li>
+                    <li><a href="/product/query.jhtml?pcId=899" target="_blank">坚果炒货</a></li>
+                    <li><a href="/product/query.jhtml?pcId=1498" target="_blank">散装休闲食品</a></li>
+                    <li><a href="/product/query.jhtml?pcId=1735" target="_blank">滋补保健</a></li>
+                </ul>
+            </div>
+            <div class="gg220x275"><a href="/products/content/2107259.html?t=013000" target="_blank"><img class="lazyload_img"  src="/resources/images/tm_bg.png" data-original="http://www.shengyuan.cn/upload/image/201509/f33f1c09-e567-4a7e-8fe2-88faa9aab5ee.jpg" width="220" height="275"/></a></div>
+        </div>
+        <div class="tab-nr">
+            <ul id="4fproduct">
+                <li class="show">
+                    <div class="louf-pro-list">
+                        <dl>
+                            <dd ><i><a href="/products/content/2107414.html?t=001500" target="_blank"><img class="lazyload_img"  src="/resources/images/tm_bg.png" data-original="http://www.shengyuan.cn/upload/image/201511/55fdbbba-8d6a-43a7-ab6f-a1eb8f63d4b6.png" ></a></i></dd>
+                            <dd ><i><a href="/products/content/2107748.html?t=091854" target="_blank"><img class="lazyload_img"  src="/resources/images/tm_bg.png" data-original="http://www.shengyuan.cn/upload/image/201511/6ec204c9-a1de-4542-abbc-3263862786ba.jpg" ></a></i></dd>
+                            <dd ><i><a href="http://www.shengyuan.cn/products/content/2107977.html?t=100903" target="_blank"><img class="lazyload_img"  src="/resources/images/tm_bg.png" data-original="http://www.shengyuan.cn/upload/image/201511/e8f756e7-7f6f-4226-9444-74de84a7f867.jpg" ></a></i></dd>
+                            <dd ><i><a href="/products/content/2107582.html?t=085801" target="_blank"><img class="lazyload_img"  src="/resources/images/tm_bg.png" data-original="http://www.shengyuan.cn/upload/image/201511/b56d3df0-f4ce-49e6-982e-3e37151bed36.jpg" ></a></i></dd>
+                            <dd ><i><a href="/products/content/2107915.html?t=105643" target="_blank"><img class="lazyload_img"  src="/resources/images/tm_bg.png" data-original="http://www.shengyuan.cn/upload/image/201511/5d522fcb-6b51-4c0d-94b6-91ca2a2d738e.jpg" ></a></i></dd>
+                            <dd class="height220"><p class="pro-title"><a href="http://www.shengyuan.cn/products/content/2115098.html?t=140535" target="_blank">御之味牛奶味棒棒饼干 170g/盒</a></p><p class="pro-sale">¥11.50</p><p class="pro-img "><a href="http://www.shengyuan.cn/products/content/2115098.html?t=140535" target="_blank"><img class="lazyload_img"  src="/resources/images/tm_bg.png" data-original="http://www.shengyuan.cn/upload/image/201506/a9707b97-acd6-4570-913d-5ef30112c51d-medium.jpg" width="160px" height="160px"/></a></p></dd>
+                            <dd class="height220"><p class="pro-title"><a href="http://www.shengyuan.cn/products/content/2107570.html?t=115424" target="_blank">徐福记100芝麻磨堡蛋糕95g（包）</a></p><p class="pro-sale">¥7.20</p><p class="pro-img "><a href="http://www.shengyuan.cn/products/content/2107570.html?t=115424" target="_blank"><img class="lazyload_img"  src="/resources/images/tm_bg.png" data-original="http://www.shengyuan.cn/upload/image/201409/fe7a5a4c-819a-4a3a-b75f-ab669ff608c0-medium.jpg" width="160px" height="160px"/></a></p></dd>
+                            <dd class="height220"><p class="pro-title"><a href="http://www.shengyuan.cn/products/content/2108010.html?t=001500" target="_blank">真巧巧克力酱心（草莓）120g（袋）</a></p><p class="pro-sale">¥4.80</p><p class="pro-img "><a href="http://www.shengyuan.cn/products/content/2108010.html?t=001500" target="_blank"><img class="lazyload_img"  src="/resources/images/tm_bg.png" data-original="http://www.shengyuan.cn/upload/image/201409/6973a39d-bd16-4de8-8054-bfc1b41a686d-medium.jpg" width="160px" height="160px"/></a></p></dd>
+                            <dd class="height220"><p class="pro-title"><a href="http://www.shengyuan.cn/products/content/2108011.html?t=001500" target="_blank">真巧巧克力酱心牛奶味饼干120g（袋）</a></p><p class="pro-sale">¥4.80</p><p class="pro-img "><a href="http://www.shengyuan.cn/products/content/2108011.html?t=001500" target="_blank"><img class="lazyload_img"  src="/resources/images/tm_bg.png" data-original="http://www.shengyuan.cn/upload/image/201409/f89367bd-4f93-4ca3-9825-93122ef2b007-medium.jpg" width="160px" height="160px"/></a></p></dd>
+                            <dd class="height220"><p class="pro-title"><a href="http://www.shengyuan.cn/products/content/2107891.html?t=001500" target="_blank">好丽友Q蒂榛子12P 336g/包</a></p><p class="pro-sale">¥22.50</p><p class="pro-img "><a href="http://www.shengyuan.cn/products/content/2107891.html?t=001500" target="_blank"><img class="lazyload_img"  src="/resources/images/tm_bg.png" data-original="http://www.shengyuan.cn/upload/image/201409/f31b055b-a390-4842-a1da-65e53ec7937a-medium.jpg" width="160px" height="160px"/></a></p></dd>
+                        </dl>
+                    </div>
+                </li>
+                <li><a href="#"> </a></li>
+                <li><a href="#"> </a></li>
+                <li><a href="#"> </a></li>
+                <li><a href="#"> </a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="clear"></div>
+
+
+    <!------------------------------------5F------------------------------------->
+
+
+    <div class="floor" id="5F" >
+        <div class="title">
+            <div class="title-txt title-four" >5F 母婴/个人护理</div>
+            <div class="tab-nav fourf-tab">
+                <ul id ="adPosition5F" >
+                    <li class="active" productCategoryId="921" productCount="3"  adPositionId=135 adCount="5"><a>婴儿奶粉</a></li>
+                    <li productCategoryId="919" productCount="3"  adPositionId=136 adCount="5"><a>宝宝用品</a></li>
+                    <li productCategoryId="912" productCount="3"  adPositionId=137 adCount="5"><a>洗发护发</a></li>
+                    <li productCategoryId="911" productCount="3"  adPositionId=138 adCount="5"><a>面部护理</a></li>
+                    <li productCategoryId="1547" productCount="3"  adPositionId=139 adCount="5"><a>其他护理</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="leftnr nr-four">
+            <div class="nr-left-yuan">
+                <ul>
+                    <li><a href="/product/query.jhtml?pcId=919" target="_blank">宝宝用品</a></li>
+                    <li><a href="/product/query.jhtml?pcId=921" target="_blank">婴儿奶粉</a></li>
+                    <li><a href="/product/query.jhtml?pcId=920" target="_blank">玩具乐器</a></li>
+                    <li><a href="/product/query.jhtml?pcId=912" target="_blank">洗发护发</a></li>
+                    <li><a href="/product/query.jhtml?pcId=911" target="_blank">面部护理</a></li>
+                    <li><a href="/product/query.jhtml?pcId=913" target="_blank">口腔护理</a></li>
+                    <li><a href="/product/query.jhtml?pcId=915" target="_blank">沐浴用品</a></li>
+                </ul>
+            </div>
+            <div class="gg220x275"><a href="/products/content/2113696.html?t=152809" target="_blank"><img class="lazyload_img" src="/resources/images/tm_bg.png" data-original="http://www.shengyuan.cn/upload/image/201509/ea459aa6-8bc4-4fc1-84e0-faed54a64d6d.jpg"width="220" height="275"/></a></div>
+        </div>
+        <div class="tab-nr">
+            <ul id="5fproduct">
+                <li class="show">
+                    <div class="louf-pro-list">
+                        <dl>
+                            <dd  class="width390" ><i><a href="/products/content/2106314.html?t=000000" target="_blank"><img class="lazyload_img"  src="/resources/images/tm_bg.png" data-original="http://www.shengyuan.cn/upload/image/201509/f4064a9e-9e34-4adf-b7da-9d114ec622e9.jpg" ></a></i></dd>
+                            <dd  ><i><a href="/products/content/2106203.html?t=000000" target="_blank"><img class="lazyload_img"  src="/resources/images/tm_bg.png" data-original="http://www.shengyuan.cn/upload/image/201509/a154d574-5f97-4953-8f7d-d2215d383e39.jpg" ></a></i></dd>
+                            <dd  ><i><a href="/products/content/2106257.html?t=000000" target="_blank"><img class="lazyload_img"  src="/resources/images/tm_bg.png" data-original="http://www.shengyuan.cn/upload/image/201509/ba36d560-0602-40cc-b033-1dfdc7c002e1.jpg" ></a></i></dd>
+                            <dd  ><i><a href="/products/content/2106230.html?t=000000" target="_blank"><img class="lazyload_img"  src="/resources/images/tm_bg.png" data-original="http://www.shengyuan.cn/upload/image/201509/4d74baa4-d94a-470e-9ee1-6766a7e9894e.jpg" ></a></i></dd>
+                            <dd class="height220 width390" ><i><a href="/products/content/2106144.html?t=000000" target="_blank"><img class="lazyload_img"  src="/resources/images/tm_bg.png" data-original="http://www.shengyuan.cn/upload/image/201509/3ec4e4a4-e307-4bc1-a6fd-3d8f1ffaa261.jpg" ></a></i></dd>
+                            <dd class="height220"><p class="pro-title"><a href="http://www.shengyuan.cn/products/content/2106156.html?t=001500" target="_blank">伊利金装婴幼儿2段配方奶粉400g（盒）</a></p><p class="pro-sale">￥59.00</p><p class="pro-img "><a href="http://www.shengyuan.cn/products/content/2106156.html?t=001500" target="_blank" ><img class="lazyload_img" src="/resources/images/tm_bg.png" data-original="http://www.shengyuan.cn/upload/image/201409/1296a435-1abb-49b3-8714-558d85a41c38-medium.jpg" width="160px" height="160px"/></a></p></dd>
+                            <dd class="height220"><p class="pro-title"><a href="http://www.shengyuan.cn/products/content/2106190.html?t=001500" target="_blank">雅士利金装安贝慧较大婴儿配方奶粉2段800g（罐）</a></p><p class="pro-sale">￥338.00</p><p class="pro-img "><a href="http://www.shengyuan.cn/products/content/2106190.html?t=001500" target="_blank" ><img class="lazyload_img" src="/resources/images/tm_bg.png" data-original="http://www.shengyuan.cn/upload/image/201409/21401c94-e8dd-4ef6-9b4c-b8493e4db8f2-medium.jpg" width="160px" height="160px"/></a></p></dd>
+                            <dd class="height220"><p class="pro-title"><a href="http://www.shengyuan.cn/products/content/2106109.html?t=001500" target="_blank">雀巢能恩1段金盾配方奶粉 400g（盒）</a></p><p class="pro-sale">￥106.50</p><p class="pro-img "><a href="http://www.shengyuan.cn/products/content/2106109.html?t=001500" target="_blank" ><img class="lazyload_img" src="/resources/images/tm_bg.png" data-original="http://www.shengyuan.cn/upload/image/201409/92bedb9a-7907-4b47-8ed2-b8381b0b71d8-medium.jpg" width="160px" height="160px"/></a></p></dd>
+                        </dl>
+                    </div>
+                </li>
+                <li><a href="#"> </a></li>
+                <li><a href="#"> </a></li>
+                <li><a href="#"> </a></li>
+                <li><a href="#"> </a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="clear"></div>
+
+
+    <!--------------------------------------6F--------------------------------------->
+
+
+    <div class="floor" id="6F">
+        <div class="title">
+            <div class="title-txt title-five" >6F 家居用品</div>
+            <div class="tab-nav fivef-tab">
+                <ul id="adPosition6F">
+                    <li class="active" productCategoryId="904" productCount="3"  adPositionId=140 adCount="5"><a>家纺日用</a></li>
+                    <li productCategoryId="906" productCount="3"  adPositionId=141 adCount="5"><a>厨具餐具</a></li>
+                    <li productCategoryId="944" productCount="3"  adPositionId=142 adCount="5"><a>纸制品</a></li>
+                    <li productCategoryId="942" productCount="3"  adPositionId=143 adCount="5"><a>家庭清洁</a></li>
+                    <li productCategoryId="907" productCount="3"  adPositionId=144 adCount="5"><a>家居五金</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="leftnr nr-five">
+            <div class="nr-left-yuan">
+                <ul>
+                    <li><a href="/product/query.jhtml?pcId=904" target="_blank">家纺日用品</a></li>
+                    <li><a href="/product/query.jhtml?pcId=908" target="_blank">床上用品</a></li>
+                    <li><a href="/product/query.jhtml?pcId=905" target="_blank">餐具水杯</a></li>
+                    <li><a href="/product/query.jhtml?pcId=906" target="_blank">厨具工具</a></li>
+                    <li><a href="/product/query.jhtml?pcId=907" target="_blank">家居五金</a></li>
+                    <li><a href="/product/query.jhtml?pcId=909" target="_blank">收纳整理</a></li>
+                    <li><a href="/product/query.jhtml?pcId=1321" target="_blank">文具用品</a></li>
+                    <li><a href="/product/query.jhtml?pcId=1691" target="_blank">中国银都</a></li>
+                    <li><a href="/product/query.jhtml?pcId=1322" target="_blank">体育用品</a></li>
+                    <li><a href="/product/query.jhtml?pcId=1323" target="_blank">影像、图文</a></li>
+                    <li><a href="/product/query.jhtml?pcId=1593" target="_blank">礼品（喜品）</a></li>
+                    <li><a href="/product/query.jhtml?pcId=1669" target="_blank">生源百货</a></li>
+                    <li><a href="/product/query.jhtml?pcId=1717" target="_blank">鑫达银业</a></li>
+                </ul>
+            </div>
+            <div class="gg220x275"><a href="/products/content/2111084.html?t=013000" target="_blank"><img class="lazyload_img"  src="/resources/images/tm_bg.png"  data-original="http://www.shengyuan.cn/upload/image/201509/086bf7de-a452-401a-9554-ba768ea6ce58.jpg" width="220" height="275"/></a></div>
+        </div>
+        <div class="tab-nr">
+            <ul id="6fproduct">
+                <li class="show">
+                    <div class="louf-pro-list">
+                        <dl>
+                            <dd  class="width390" ><i><a href="/products/content/2116191.html?t=165840" target="_blank"><img class="lazyload_img"  src="/resources/images/tm_bg.png" data-original="http://www.shengyuan.cn/upload/image/201511/dd82635c-1c11-4d1e-a8f1-165f9be71ad2.png" ></a></i></dd>
+                            <dd  ><i><a href="/products/content/2112343.html?t=092557" target="_blank"><img class="lazyload_img"  src="/resources/images/tm_bg.png" data-original="http://www.shengyuan.cn/upload/image/201509/1a87a9a8-7c6b-4a02-90f1-f31938b6eb79.jpg" ></a></i></dd>
+                            <dd  ><i><a href="/products/content/2116408.html?t=162652" target="_blank"><img class="lazyload_img"  src="/resources/images/tm_bg.png" data-original="http://www.shengyuan.cn/upload/image/201511/eb21e15c-b929-41e5-a850-7b31b3fe667e.png" ></a></i></dd>
+                            <dd  ><i><a href="/products/content/2115936.html?t=001500" target="_blank"><img class="lazyload_img"  src="/resources/images/tm_bg.png" data-original="http://www.shengyuan.cn/upload/image/201511/8705988f-4e8d-4ecf-8fa8-c8979dcb3194.png" ></a></i></dd>
+                            <dd class="height220 width390" ><i><a href="/products/content/2111023.html?t=000000" target="_blank"><img class="lazyload_img"  src="/resources/images/tm_bg.png" data-original="http://www.shengyuan.cn/upload/image/201509/1155bdf0-c32a-4eb3-af56-8e4254b4ea18.jpg" ></a></i></dd>
+                            <dd class="height220"><p class="pro-title"><a href="http://www.shengyuan.cn/products/content/2110971.html?t=135228" target="_blank">洁丽雅女士小平脚内裤65001</a></p><p class="pro-sale">￥23.90</p><p class="pro-img "><a href="http://www.shengyuan.cn/products/content/2110971.html?t=135228" target="_blank" ><img class="lazyload_img" src="/resources/images/tm_bg.png" data-original="http://www.shengyuan.cn/upload/image/201410/a3cb9f57-0a33-4875-8c84-924af98e0e07-medium.jpg" width="160px" height="160px"/></a></p></dd>
+                            <dd class="height220"><p class="pro-title"><a href="http://www.shengyuan.cn/products/content/2112182.html?t=094936" target="_blank">七匹狼男士全棉印花平脚裤03602</a></p><p class="pro-sale">￥53.90</p><p class="pro-img "><a href="http://www.shengyuan.cn/products/content/2112182.html?t=094936" target="_blank" ><img class="lazyload_img" src="/resources/images/tm_bg.png" data-original="http://www.shengyuan.cn/upload/image/201411/a8d1dd9e-cb32-4b2b-8511-e785e4b4c202-medium.jpg" width="160px" height="160px"/></a></p></dd>
+                            <dd class="height220"><p class="pro-title"><a href="http://www.shengyuan.cn/products/content/2111013.html?t=091304" target="_blank">天堂防紫外线晴雨伞(328t)</a></p><p class="pro-sale">￥30.00</p><p class="pro-img "><a href="http://www.shengyuan.cn/products/content/2111013.html?t=091304" target="_blank" ><img class="lazyload_img" src="/resources/images/tm_bg.png" data-original="http://www.shengyuan.cn/upload/image/201410/400fd00b-9e12-4c11-92c9-ec1ab9d85a2f-medium.jpg" width="160px" height="160px"/></a></p></dd>
+                        </dl>
+                    </div>
+                </li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>
+<!--floor-rool-left--->
+<div class="floor-box">
+    <ul>
+        <li>
+            <a class="num" href="#1F" style="display:none">1F</a>
+            <a class="word" href="#1F" style="display:block">海淘专区</a>
+        </li>
+        <li>
+            <a class="num" href="#2F">2F</a>
+            <a class="word" href="#2F">生鲜专区</a>
+        </li>
+        <li>
+            <a class="num" href="#3F">3F</a>
+            <a class="word" href="#3F">粮油调味</a>
+        </li>
+        <li>
+            <a class="num" href="#4F">4F</a>
+            <a class="word" href="#4F">食品饮料</a>
+        </li>
+        <li>
+            <a class="num" href="#5F">5F</a>
+            <a class="word" href="#5F">母婴护理</a>
+        </li>
+        <li>
+            <a class="num" href="#6F">6F</a>
+            <a class="word" href="#6F">家居用品</a>
+        </li>
+    </ul>
+</div>
+<!------------------main--------end---------------------->
+
+<input type="hidden" id="showid" name="showid" value="0"/>
+<div class="clear"></div>
+<div class="footer">
+    <div class="bottom">
+        <div class="blist">
+
+            <ul>
+                <li>购物指南</li>
+                <li>
+                    <a href="/articles/content/201403/12/1.html" target="_blank">交易条款</a>
+                </li>
+                <li>
+                    <a href="/articles/content/201403/1/1.html" target="_blank">购物流程</a>
+                </li>
+                <li>
+                    <a href="/articles/content/201403/6/1.html" target="_blank">发票制度</a>
+                </li>
+                <li>
+                    <a href="/articles/content/201403/8/1.html" target="_blank">常见问题</a>
+                </li>
+            </ul>
+
+            <ul>
+                <li class="bottom_nk_bt">支付方式</li>
+                <li>
+                    <a href="/articles/content/201407/60/1.html" target="_blank">货到付款</a>
+                </li>
+                <li>
+                    <a href="/articles/content/201406/51/1.html" target="_blank">支付宝支付</a>
+                </li>
+                <li>
+                    <a href="/articles/content/201406/52/1.html" target="_blank">银联在线支付</a>
+                </li>
+            </ul>
+
+            <ul>
+                <li class="bottom_nk_bt">配送方式</li>
+                <li>
+                    <a href="/articles/content/201406/44/1.html" target="_blank">送货上门</a>
+                </li>
+                <li>
+                    <a href="/articles/content/201406/45/1.html" target="_blank">门店自提</a>
+                </li>
+                <li>
+                    <a href="/articles/content/201406/46/1.html" target="_blank">物流状态查询</a>
+                </li>
+            </ul>
+
+            <ul>
+                <li class="bottom_nk_bt">售后服务</li>
+                <li>
+                    <a href="/articles/content/201406/47/1.html" target="_blank">服务承诺</a>
+                </li>
+                <li>
+                    <a href="/articles/content/201403/5/1.html" target="_blank">退换货政策</a>
+                </li>
+                <li>
+                    <a href="/articles/content/201407/62/1.html" target="_blank">退换货流程</a>
+                </li>
+                <li>
+                    <a href="/articles/content/201407/63/1.html" target="_blank">联系客服</a>
+                </li>
+            </ul>
+
+            <ul class="service">
+                <li class="ser-phone">
+                    <p>4008-357-699（购物热线）</p>
+                    <p>4008-357-099（客服热线）</p>
+                </li>
+                <li class="ser-mail">Service@shengyuan.cn</li>
+            </ul>
+
+            <ul class="internet">
+                <li class="ser-wx">
+                    <p><img src="../images/wx.gif" /></p>
+                    <p>扫一扫<br /> 关注我们</p>
+                </li>
+                <li class="clear"></li>
+                <li class="ser-wb">
+                    <span class="tx"><a href="http://t.qq.com/shengyuanshangou" target="_blank"  >腾讯微博</a></span>
+                    <span class="xl"><a href="http://weibo.com/u/5096888851" target="_blank">新浪微博</a></span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="bcopy">
+            <a href="/articles/content/201406/53/1.html" target="_blank">关于我们</a>
+            <span>|</span>
+            <a href="/articles/content/201407/63/1.html" target="_blank">联系我们</a>
+            <span>|</span>
+            <a href="/article/list/18.jhtml" target="_blank">诚聘英才</a>
+            <span>|</span>
+            <a href="/articles/content/201407/65/1.html" target="_blank">法律声明</a>
+            <span>|</span>
+            <a href="/friend_link.jhtml" target="_blank">友情链接</a>
+            <span>|</span>
+            <a href="http://m.kuaidi100.com" target="_blank">快递查询</a>
+
+
+            <br />
+            Copyright © 2014 shengyuan.cn，All Rights Reserved 湘ICP备15013671号 使用本网站即表示接受生源闪购的用户协议。<br />
+            招商团购咨询：15897359948（陈） 18973506961（刘）<br />
+            版权所有 郴州市生源商业集团
+        </div>
+    </div>
+</div>
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?ae485a95564f5efba533a36a1e39f8a9";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+<!------------------------------------------------>
+
+<script>
+    $().ready(function() {
+        indexBannerInit();
+        findPromotionProduct(5, 1, 0);
+        jQuery("img").lazyload({ threshold : 200, effect : "fadeIn" });
+    })
+</script>
+</body>
+</html>
