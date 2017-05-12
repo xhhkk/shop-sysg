@@ -6,7 +6,28 @@ VALUES ('admin', 'admin', '系统管理员', 'admin@admin.com', '15212345678', '
 # 商品表
 INSERT INTO tb_product(P_NAME,P_REAL_PRICE,P_NOW_PRICE,IS_STOCK,P_DESC,P_SIZE,P_COLOR,P_SCORE,P_TYPE_ID,
                        P_PIC_ID,P_PIC_URI)
-VALUES ('【2罐】澳洲爱他美Aptamil金装婴幼儿奶粉4段（2岁以上）900g','339.00','300.00',1,'','900g','奶黄色粉末','4.8','');
+VALUES ('【2罐】澳洲爱他美Aptamil金装婴幼儿奶粉4段（2岁以上）900g','400.00','369.00',1,'闪购商品','900g','奶黄色粉末','4.8',
+        10,1,'/shop-sysg/resources/front/images/3aff4b72-1bce-4040-9d73-9b0d177299df.jpg'),
+  ('【2罐】英国牛栏Cow&Gate婴儿奶粉2段6-12个月900克','400.00','316.00',1,'闪购商品','900g','奶黄色粉末','4.5',10,
+  2,'/shop-sysg/resources/front/images/93f7ab35-a0f4-4e59-bbf0-892f74b4ed45.jpg'),
+  ('【2罐】德国Aptamil/爱他美 婴幼儿奶粉3段（10-12个月）800g','400.00','386.00',1,'闪购商品','800g','奶黄色粉末','4.5',10,
+   3,'/shop-sysg/resources/front/images/b742871b-8b35-4424-b182-ff13fc35e403.jpg'),
+  ('【2盒】德国Aptamil/爱他美 婴幼儿奶粉1+段（1岁以上）600g','350.00','316.00',1,'闪购商品','600g','奶黄色粉末','4.5',10,
+   4,'/shop-sysg/resources/front/images/444f7550-d82e-427a-8aa0-9bbb833cc66c.jpg'),
+  ('【2盒】德国Hipp/喜宝益生菌婴幼儿奶粉（0-6个月）1段600g','300.00','286.00',1,'闪购商品','600g','奶黄色粉末','4.5',10,
+   5,'/shop-sysg/resources/front/images/1e20a609-077e-4dd4-a4ad-0ce3b947689c.jpg');
+INSERT INTO tb_product(P_NAME,P_REAL_PRICE,P_NOW_PRICE,IS_STOCK,P_DESC,P_SIZE,P_COLOR,P_SCORE,P_TYPE_ID,
+                       P_PIC_ID,P_PIC_URI)
+VALUES ('80#红富士(1000g)','15.00','13.50',1,'闪购商品','1000g','红色','4.8',20,9,
+        '/shop-sysg/resources/front/images/8636a356-0295-44bc-b493-204f29e2c092-medium.jpg'),
+  ('黄元帅 1000g','20.00','19.9',1,'闪购商品','1000g','黄色','4.5',20,10,
+   '/shop-sysg/resources/front/images/93f7ab35-a0f4-4e59-bbf0-892f74b4ed45.jpg'),
+  ('火龙果1000g/份','13.00','12.9',1,'闪购商品','1000g','红皮白芯/红芯','4.9',20,11,
+   '/shop-sysg/resources/front/images/173ae88c-9de4-4688-b6ab-9cb7966e0c82-medium.jpg'),
+  ('雪莲果 1000g','12.00','10.00',1,'闪购商品','1000g','棕皮白芯','4.9',20,12,
+   '/shop-sysg/resources/front/images/91c615b4-af2d-473c-9195-afa74ead58fa-medium.jpg'),
+  ('国产香蕉（1000g）','10.00','8.90',1,'闪购商品','1000g','黄皮米白芯','4.9',20,13,
+   '/shop-sysg/resources/front/images/62226a99-1832-415e-b285-7aeb024b05d4-medium.jpg');
 
 
 # 商品类型表
