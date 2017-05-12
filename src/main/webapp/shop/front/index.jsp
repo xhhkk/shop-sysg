@@ -2,7 +2,7 @@
 <html>
  <%@include file="header.jsp"%>
 <body>
- <%@include file="top-bar.jsp"%>
+ <%@include file="menu.jsp"%>
  <%@include file="right-float.jsp"%>
  <%@include file="banner.jsp"%>
 
