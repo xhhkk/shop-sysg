@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.fz.shop.mapper.ProductDoMapper" >
+  <resultMap id="BaseResultMap" type="com.fz.shop.model.ProductDo" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="P_ID" property="pId" jdbcType="BIGINT" />
+    <result column="P_NAME" property="pName" jdbcType="VARCHAR" />
+    <result column="P_REAL_PRICE" property="pRealPrice" jdbcType="DOUBLE" />
+    <result column="P_NOW_PRICE" property="pNowPrice" jdbcType="DOUBLE" />
+    <result column="IS_STOCK" property="isStock" jdbcType="TINYINT" />
+    <result column="P_DESC" property="pDesc" jdbcType="VARCHAR" />
+    <result column="P_SIZE" property="pSize" jdbcType="VARCHAR" />
+    <result column="P_COLOR" property="pColor" jdbcType="VARCHAR" />
+    <result column="P_SCORE" property="pScore" jdbcType="DOUBLE" />
+    <result column="P_TYPE_ID" property="pTypeId" jdbcType="BIGINT" />
+    <result column="P_PIC_ID" property="pPicId" jdbcType="BIGINT" />
+    <result column="P_PIC_URI" property="pPicUri" jdbcType="VARCHAR" />
+    <result column="STATE" property="state" jdbcType="TINYINT" />
+    <result column="CREATE_BY" property="createBy" jdbcType="BIGINT" />
+    <result column="CREATE_DATE" property="createDate" jdbcType="TIMESTAMP" />
+    <result column="UPDATE_BY" property="updateBy" jdbcType="BIGINT" />
+    <result column="UPDATE_DATE" property="updateDate" jdbcType="TIMESTAMP" />
+  </resultMap>
+</mapper>

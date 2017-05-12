@@ -112,6 +112,4 @@ VALUES ('奶粉', 1, '/shop/product-list.jsp', 1),
   ('方便速食', 3, '/shop/product-list.jsp', 1),
   ('核桃酥', 4, '/shop/product-list.jsp', 1),
   ('吸尘器', 8, '/shop/product-list.jsp', 1),
-  ('方便面', 77, '/shop/product-list.jsp', 1),
-  ('电脑数码', 1, '/shop/product-list.jsp', 1),
-  ('代步机', 4, '/shop/product-list.jsp', 1);
+  ('方便面', 77, '/shop/product-list.jsp', 1);

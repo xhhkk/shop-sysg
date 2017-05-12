@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.fz.shop.mapper.CarDoMapper" >
+  <resultMap id="BaseResultMap" type="com.fz.shop.model.CarDo" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="CAR_ID" property="carId" jdbcType="BIGINT" />
+    <result column="U_ID" property="uId" jdbcType="BIGINT" />
+    <result column="P_ID" property="pId" jdbcType="BIGINT" />
+    <result column="P_SIZE" property="pSize" jdbcType="VARCHAR" />
+    <result column="P_COLOR" property="pColor" jdbcType="VARCHAR" />
+    <result column="P_NUM" property="pNum" jdbcType="BIGINT" />
+    <result column="P_PRICE" property="pPrice" jdbcType="DOUBLE" />
+    <result column="ALL_PRICE" property="allPrice" jdbcType="DOUBLE" />
+    <result column="STATE" property="state" jdbcType="TINYINT" />
+    <result column="CREATE_BY" property="createBy" jdbcType="BIGINT" />
+    <result column="CREATE_DATE" property="createDate" jdbcType="TIMESTAMP" />
+    <result column="UPDATE_BY" property="updateBy" jdbcType="BIGINT" />
+    <result column="UPDATE_DATE" property="updateDate" jdbcType="TIMESTAMP" />
+  </resultMap>
+</mapper>

@@ -48,7 +48,7 @@
         <table tableName="TB_PRO_PIC" domainObjectName="ProPicDo">
             <generatedKey column="PIC_ID" sqlStatement="Mysql" identity="true"/>
         </table>
-        <table tableName="TB_PRO_CAR" domainObjectName="ProCarDo">
+        <table tableName="TB_CAR" domainObjectName="CarDo">
             <generatedKey column="CAR_ID" sqlStatement="Mysql" identity="true"/>
         </table>
         <table tableName="TB_PRO_COMMENT" domainObjectName="ProComDo">
