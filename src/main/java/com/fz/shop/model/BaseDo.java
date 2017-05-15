@@ -14,5 +14,4 @@ public class BaseDo implements Serializable{
 
     @Transient
     private Long redisKeyId;*/
-
 }

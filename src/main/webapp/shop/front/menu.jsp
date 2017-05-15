@@ -394,26 +394,22 @@ href="http://windows.microsoft.com/zh-cn/internet-explorer/download-ie"></a></li
         </div>
 
         <script type="text/javascript">
-            $(function(){
-                $.get("/shop-sysg/menu/list", {}, function (data, status){
-                    if(status == "success"){
+            $(function () {
+                $.get("/shop-sysg/menu/list", {}, function (data, status) {
+                    if (status == "success") {
                         var htmlStr;
 
+                        $.each(data[0], function (i, v) {
+                            htmlStr = "";
+                            htmlStr += '<li class="menus1 per-menu1">';
+                            htmlStr += '<h3><a href="#" target="_blank" id="h30">' + v.typeName + '</a></h3>';
+                            htmlStr += '<div class="xl">';
 
-//                        if(typeof (data[0])!= "undefined"){
-                            $.each(data[0], function (i, v){
-//                                htmlStr ="";
-//                                htmlStr += '<li class="menus1 per-menu1">';
-//                                htmlStr += '<h3><a href="#" target="_blank" id="h30">'+ v.ptypeName+'</a></h3>';
-//                                htmlStr += '<div class="xl">';
-//
-//                                htmlStr += '</div>';
-//                                htmlStr += '</li>';
-                                alert(v.productTypeName);
-                            });
-//                        }
+                            htmlStr += '</div>';
+                            htmlStr += '</li>';
+                        });
                     }
-                },"json");
+                }, "json");
             });
         </script>
 
@@ -421,6 +417,7 @@ href="http://windows.microsoft.com/zh-cn/internet-explorer/download-ie"></a></li
             <div class="top-nav" id="Jsort">
                 <i></i>
                 <span>全部商品分类</span>
+
                 <div class="sub-nav" id="sortList" style="display: block;">
                     <ul id="menuAll">
 
