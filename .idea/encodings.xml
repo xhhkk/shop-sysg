@@ -5,8 +5,14 @@
     <file url="file://$PROJECT_DIR$/.gitignore" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/fz/shop/model/BaseDo.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/fz/shop/model/BaseDo.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/fz/shop/model/BaseDo.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/fz/shop/service/BaseService.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/resources/spring/spring-mvc.xml" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/resources/spring/spring.xml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/resources/front/js/easyui.min.js" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/resources/front/js/product_common_event.js" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/resources/front/js/subject_common.js" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/resources/front/js/system.message.js" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/shop/htsc.html" charset="GBK" />
   </component>
 </project>

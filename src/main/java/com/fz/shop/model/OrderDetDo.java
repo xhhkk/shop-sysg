@@ -1,10 +1,13 @@
 package com.fz.shop.model;
 
+import lombok.Data;
+
 import java.util.Date;
 import javax.persistence.*;
 
+@Data
 @Table(name = "tb_order_detail")
-public class OrderDetDo {
+public class OrderDetDo extends BaseDo{
     /**
      * 订单明细编号
      */

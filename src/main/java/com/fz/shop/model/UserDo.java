@@ -1,15 +1,19 @@
 package com.fz.shop.model;
 
+import lombok.Data;
+
 import java.util.Date;
 import javax.persistence.*;
 
+@Data
 @Table(name = "tb_user")
-public class UserDo {
+public class UserDo extends BaseDo{
     /**
      * 用户编号
      */
     @Id
     @Column(name = "USER_ID")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long userId;
 
     /**

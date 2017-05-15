@@ -134,7 +134,7 @@
                 <!-- 这里的配置我的理解是自动给后面action的方法return的字符串加上前缀和后缀，变成一个 可用的url地址 -->
                 <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
                     <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
-                    <property name="prefix" value="/WEB-INF/views/"/>
+                    <property name="prefix" value="/WEB-INF/views/front/"/>
                     <property name="suffix" value=".jsp"/>
                 </bean>
             </list>
@@ -197,7 +197,8 @@
         <property name="maxInMemorySize" value="40960"/>
     </bean>
 
-    <!-- 映射根目录，所访问的页面 -->
-    <!--<mvc:view-controller path="/" view-name="index"/>-->
+     <!--映射根目录，所访问的页面 -->
+    <mvc:view-controller path="/" view-name="index"/>
+    <mvc:view-controller path="/back/" view-name="index"/>
 
 </beans>

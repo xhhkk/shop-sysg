@@ -1,10 +1,13 @@
 package com.fz.shop.model;
 
+import lombok.Data;
+
 import java.util.Date;
 import javax.persistence.*;
 
+@Data
 @Table(name = "tb_pro_detail")
-public class ProDetDo {
+public class ProDetDo extends BaseDo{
     /**
      * 商品明细ID
      */

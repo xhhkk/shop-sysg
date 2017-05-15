@@ -25,7 +25,7 @@ public class MenuServiceImpl extends BaseServiceImpl<MenuDo> implements MenuServ
     @Override
     public Map<Long, List<MenuDo>> queryMenuAll() {
         MenuDo menuDo = new MenuDo();
-        menuDo.setTypeId(0L);
+        menuDo.setTypePId(0L);
 
 //        menuDo.setRedisKeyId(menuDo.getPTypePId());
 

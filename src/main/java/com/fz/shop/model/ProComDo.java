@@ -1,10 +1,13 @@
 package com.fz.shop.model;
 
+import lombok.Data;
+
 import java.util.Date;
 import javax.persistence.*;
 
+@Data
 @Table(name = "tb_pro_comment")
-public class ProComDo {
+public class ProComDo extends BaseDo{
     /**
      * 商品评论ID
      */

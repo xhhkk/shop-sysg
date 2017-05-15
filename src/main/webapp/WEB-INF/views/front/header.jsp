@@ -1,8 +1,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<head>
+
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="baidu-site-verification" content="QEcYnx9tS8">
-  <title>生源闪购——郴州本地的网上商城，送货上门</title>
+
 
   <%
     String path = request.getContextPath();
@@ -71,4 +71,3 @@
   <script type="text/javascript" src="${path}/resources/front/js/citySelect.js"></script>
   <script type="text/javascript" src="${path}/resources/front/js/jquery.cookie.js"></script>
   <script type="text/javascript" src="${path}/resources/front/js/top_receiver.js"></script>
-</head>

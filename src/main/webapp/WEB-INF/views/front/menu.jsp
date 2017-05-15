@@ -394,22 +394,46 @@ href="http://windows.microsoft.com/zh-cn/internet-explorer/download-ie"></a></li
         </div>
 
         <script type="text/javascript">
-            $(function () {
-                $.get("/shop-sysg/menu/list", {}, function (data, status) {
-                    if (status == "success") {
-                        var htmlStr;
 
-                        $.each(data[0], function (i, v) {
-                            htmlStr = "";
-                            htmlStr += '<li class="menus1 per-menu1">';
-                            htmlStr += '<h3><a href="#" target="_blank" id="h30">' + v.typeName + '</a></h3>';
+            $(function () {
+                $.get("/shop-sysg/menu/list", {}, function (data, status){
+                    if(status == "success"){
+                        var htmlStr;
+                        $.each(data[0], function (i, v){
+                            htmlStr ="";
+                            htmlStr += '<li class="menus'+(i+1)+' per-menu'+(i+1)+'">';
+                            htmlStr += '<h3><a href="#" target="_blank" id="h30">'+ v.typeName+'</a></h3>';
                             htmlStr += '<div class="xl">';
+                            htmlStr += '<a href="#" title="'+data[v.typeId][0].typeName+'">'+data[v.typeId][0].typeName+'</a>';
+                            htmlStr += '<a href="#" title="'+data[v.typeId][1].typeName+'">'+data[v.typeId][1].typeName+'</a>';
+                            htmlStr += '<a href="#" title="'+data[v.typeId][2].typeName+'">'+data[v.typeId][2].typeName+'</a>';
+                            htmlStr += '</div>';
+
+                            htmlStr += '<div class="dorpmenu sub-menu'+(i+1)+'">';
+                            htmlStr += '<div class="dorpmenubj">';
+                            htmlStr += '<div class="dorpmenu-left">';
+
+                            if(typeof (data[v.typeId]) != "undefined"){
+                                $.each(data[v.typeId], function(ind,val){
+                                    htmlStr += '<dl>';
+                                    htmlStr += '<dt><a href="#">'+ val.typeName +'</a></dt>';
+                                    if(typeof (data[val.typeId]) != "undefined"){
+                                        $.each(data[val.typeId], function(index,value){
+                                            htmlStr += '<dd><a href="#">' + value.typeName + '</a></dd>';
+                                        });
+                                    }
+                                    htmlStr += '</dl>';
+                                });
+                            }
 
                             htmlStr += '</div>';
+                            htmlStr += '</div>';
                             htmlStr += '</li>';
+
+                            $("#menuAll").append(htmlStr);
                         });
                     }
-                }, "json");
+                }, 'json');
             });
         </script>
 

@@ -34,13 +34,13 @@
         <!--</table>-->
 
         <table tableName="TB_USER" domainObjectName="UserDo">
-            <generatedKey column="U_ID" sqlStatement="Mysql" identity="true"/>
+            <generatedKey column="USER_ID" sqlStatement="Mysql" identity="true"/>
         </table>
         <table tableName="TB_PRO_TYPE" domainObjectName="MenuDo">
-            <generatedKey column="P_TYPE_ID" sqlStatement="Mysql" identity="true"/>
+            <generatedKey column="TYPE_ID" sqlStatement="Mysql" identity="true"/>
         </table>
         <table tableName="TB_PRODUCT" domainObjectName="ProductDo">
-            <generatedKey column="P_ID" sqlStatement="Mysql" identity="true"/>
+            <generatedKey column="PRO_ID" sqlStatement="Mysql" identity="true"/>
         </table>
         <table tableName="TB_PRO_DETAIL" domainObjectName="ProDetDo">
             <generatedKey column="DET_ID" sqlStatement="Mysql" identity="true"/>

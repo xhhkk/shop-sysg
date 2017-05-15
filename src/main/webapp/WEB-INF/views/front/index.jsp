@@ -1,6 +1,9 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
+<head>
  <%@include file="header.jsp"%>
+ <title>生源闪购——郴州本地的网上商城，送货上门</title>
+</head>
 <body>
  <%@include file="menu.jsp"%>
  <%@include file="right-float.jsp"%>

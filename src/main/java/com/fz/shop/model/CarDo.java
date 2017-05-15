@@ -1,10 +1,12 @@
 package com.fz.shop.model;
 
+import lombok.Data;
+
 import java.util.Date;
 import javax.persistence.*;
-
+@Data
 @Table(name = "tb_car")
-public class CarDo {
+public class CarDo extends BaseDo{
     /**
      * 购物车编号
      */

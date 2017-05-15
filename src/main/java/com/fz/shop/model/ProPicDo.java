@@ -1,10 +1,13 @@
 package com.fz.shop.model;
 
+import lombok.Data;
+
 import java.util.Date;
 import javax.persistence.*;
 
+@Data
 @Table(name = "tb_pro_pic")
-public class ProPicDo {
+public class ProPicDo extends BaseDo{
     /**
      * 图片编号
      */
