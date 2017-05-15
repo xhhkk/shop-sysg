@@ -8,36 +8,29 @@ import java.util.Date;
 import javax.persistence.*;
 
 @Data
-@XStreamAlias("menu")
 @Table(name = "tb_pro_type")
 public class MenuDo extends BaseDo{
     /**
-     * 商品类型编号
+     * 商品类型ID
      */
     @Id
-    @Column(name = "P_TYPE_ID")
+    @Column(name = "TYPE_ID")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
-    //    @SequenceGenerator(name = "seq_employee_id",
-//            allocationSize = 1, initialValue = 1,
-//            sequenceName = "seq_employee_id")
-//    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_employee_id")
-
     @XStreamAsAttribute
-    @XStreamAlias("pTypeId")
-    private Long pTypeId;
+    @XStreamAlias("typeId")
+    private Long typeId;
 
     /**
      * 商品类型名称
      */
-    @Column(name = "P_TYPE_NAME")
-    private String pTypeName;
+    @Column(name = "TYPE_NAME")
+    private String typeName;
 
     /**
      * 商品类型父类编号
      */
-    @Column(name = "P_TYPE_P_ID")
-    private Long pTypePId;
+    @Column(name = "TYPE_P_ID")
+    private Long typePId;
 
     /**
      * 菜单URL
@@ -86,6 +79,5 @@ public class MenuDo extends BaseDo{
      */
     @Column(name = "UPDATE_DATE")
     private Date updateDate;
-
 
 }

@@ -9,27 +9,26 @@ public class ProductDo {
      * 商品编号
      */
     @Id
-    @Column(name = "P_ID")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long pId;
+    @Column(name = "PRO_ID")
+    private Long proId;
 
     /**
      * 商品名称
      */
-    @Column(name = "P_NAME")
-    private String pName;
+    @Column(name = "PRO_NAME")
+    private String proName;
 
     /**
      * 商品原价
      */
-    @Column(name = "P_REAL_PRICE")
-    private Double pRealPrice;
+    @Column(name = "PRO_REAL_PRICE")
+    private Double proRealPrice;
 
     /**
      * 商品现价
      */
-    @Column(name = "P_NOW_PRICE")
-    private Double pNowPrice;
+    @Column(name = "PRO_NOW_PRICE")
+    private Double proNowPrice;
 
     /**
      * 是否有库存 1:有 0:无
@@ -40,44 +39,44 @@ public class ProductDo {
     /**
      * 商品描述
      */
-    @Column(name = "P_DESC")
-    private String pDesc;
+    @Column(name = "PRO_DESC")
+    private String proDesc;
 
     /**
      * 商品大小
      */
-    @Column(name = "P_SIZE")
-    private String pSize;
+    @Column(name = "PRO_SIZE")
+    private String proSize;
 
     /**
      * 商品颜色
      */
-    @Column(name = "P_COLOR")
-    private String pColor;
+    @Column(name = "PRO_COLOR")
+    private String proColor;
 
     /**
      * 评价分数
      */
-    @Column(name = "P_SCORE")
-    private Double pScore;
+    @Column(name = "PRO_SCORE")
+    private Double proScore;
 
     /**
      * 商品类型ID
      */
-    @Column(name = "P_TYPE_ID")
-    private Long pTypeId;
+    @Column(name = "PRO_TYPE_ID")
+    private Long proTypeId;
 
     /**
      * 商品默认图片ID
      */
-    @Column(name = "P_PIC_ID")
-    private Long pPicId;
+    @Column(name = "PRO_PIC_ID")
+    private Long proPicId;
 
     /**
      * 商品默认图片URL
      */
-    @Column(name = "P_PIC_URI")
-    private String pPicUri;
+    @Column(name = "PRO_PIC_URI")
+    private String proPicUri;
 
     /**
      * 状态 1:可用状态  0:删除状态
@@ -112,73 +111,73 @@ public class ProductDo {
     /**
      * 获取商品编号
      *
-     * @return P_ID - 商品编号
+     * @return PRO_ID - 商品编号
      */
-    public Long getpId() {
-        return pId;
+    public Long getProId() {
+        return proId;
     }
 
     /**
      * 设置商品编号
      *
-     * @param pId 商品编号
+     * @param proId 商品编号
      */
-    public void setpId(Long pId) {
-        this.pId = pId;
+    public void setProId(Long proId) {
+        this.proId = proId;
     }
 
     /**
      * 获取商品名称
      *
-     * @return P_NAME - 商品名称
+     * @return PRO_NAME - 商品名称
      */
-    public String getpName() {
-        return pName;
+    public String getProName() {
+        return proName;
     }
 
     /**
      * 设置商品名称
      *
-     * @param pName 商品名称
+     * @param proName 商品名称
      */
-    public void setpName(String pName) {
-        this.pName = pName;
+    public void setProName(String proName) {
+        this.proName = proName;
     }
 
     /**
      * 获取商品原价
      *
-     * @return P_REAL_PRICE - 商品原价
+     * @return PRO_REAL_PRICE - 商品原价
      */
-    public Double getpRealPrice() {
-        return pRealPrice;
+    public Double getProRealPrice() {
+        return proRealPrice;
     }
 
     /**
      * 设置商品原价
      *
-     * @param pRealPrice 商品原价
+     * @param proRealPrice 商品原价
      */
-    public void setpRealPrice(Double pRealPrice) {
-        this.pRealPrice = pRealPrice;
+    public void setProRealPrice(Double proRealPrice) {
+        this.proRealPrice = proRealPrice;
     }
 
     /**
      * 获取商品现价
      *
-     * @return P_NOW_PRICE - 商品现价
+     * @return PRO_NOW_PRICE - 商品现价
      */
-    public Double getpNowPrice() {
-        return pNowPrice;
+    public Double getProNowPrice() {
+        return proNowPrice;
     }
 
     /**
      * 设置商品现价
      *
-     * @param pNowPrice 商品现价
+     * @param proNowPrice 商品现价
      */
-    public void setpNowPrice(Double pNowPrice) {
-        this.pNowPrice = pNowPrice;
+    public void setProNowPrice(Double proNowPrice) {
+        this.proNowPrice = proNowPrice;
     }
 
     /**
@@ -202,127 +201,127 @@ public class ProductDo {
     /**
      * 获取商品描述
      *
-     * @return P_DESC - 商品描述
+     * @return PRO_DESC - 商品描述
      */
-    public String getpDesc() {
-        return pDesc;
+    public String getProDesc() {
+        return proDesc;
     }
 
     /**
      * 设置商品描述
      *
-     * @param pDesc 商品描述
+     * @param proDesc 商品描述
      */
-    public void setpDesc(String pDesc) {
-        this.pDesc = pDesc;
+    public void setProDesc(String proDesc) {
+        this.proDesc = proDesc;
     }
 
     /**
      * 获取商品大小
      *
-     * @return P_SIZE - 商品大小
+     * @return PRO_SIZE - 商品大小
      */
-    public String getpSize() {
-        return pSize;
+    public String getProSize() {
+        return proSize;
     }
 
     /**
      * 设置商品大小
      *
-     * @param pSize 商品大小
+     * @param proSize 商品大小
      */
-    public void setpSize(String pSize) {
-        this.pSize = pSize;
+    public void setProSize(String proSize) {
+        this.proSize = proSize;
     }
 
     /**
      * 获取商品颜色
      *
-     * @return P_COLOR - 商品颜色
+     * @return PRO_COLOR - 商品颜色
      */
-    public String getpColor() {
-        return pColor;
+    public String getProColor() {
+        return proColor;
     }
 
     /**
      * 设置商品颜色
      *
-     * @param pColor 商品颜色
+     * @param proColor 商品颜色
      */
-    public void setpColor(String pColor) {
-        this.pColor = pColor;
+    public void setProColor(String proColor) {
+        this.proColor = proColor;
     }
 
     /**
      * 获取评价分数
      *
-     * @return P_SCORE - 评价分数
+     * @return PRO_SCORE - 评价分数
      */
-    public Double getpScore() {
-        return pScore;
+    public Double getProScore() {
+        return proScore;
     }
 
     /**
      * 设置评价分数
      *
-     * @param pScore 评价分数
+     * @param proScore 评价分数
      */
-    public void setpScore(Double pScore) {
-        this.pScore = pScore;
+    public void setProScore(Double proScore) {
+        this.proScore = proScore;
     }
 
     /**
      * 获取商品类型ID
      *
-     * @return P_TYPE_ID - 商品类型ID
+     * @return PRO_TYPE_ID - 商品类型ID
      */
-    public Long getpTypeId() {
-        return pTypeId;
+    public Long getProTypeId() {
+        return proTypeId;
     }
 
     /**
      * 设置商品类型ID
      *
-     * @param pTypeId 商品类型ID
+     * @param proTypeId 商品类型ID
      */
-    public void setpTypeId(Long pTypeId) {
-        this.pTypeId = pTypeId;
+    public void setProTypeId(Long proTypeId) {
+        this.proTypeId = proTypeId;
     }
 
     /**
      * 获取商品默认图片ID
      *
-     * @return P_PIC_ID - 商品默认图片ID
+     * @return PRO_PIC_ID - 商品默认图片ID
      */
-    public Long getpPicId() {
-        return pPicId;
+    public Long getProPicId() {
+        return proPicId;
     }
 
     /**
      * 设置商品默认图片ID
      *
-     * @param pPicId 商品默认图片ID
+     * @param proPicId 商品默认图片ID
      */
-    public void setpPicId(Long pPicId) {
-        this.pPicId = pPicId;
+    public void setProPicId(Long proPicId) {
+        this.proPicId = proPicId;
     }
 
     /**
      * 获取商品默认图片URL
      *
-     * @return P_PIC_URI - 商品默认图片URL
+     * @return PRO_PIC_URI - 商品默认图片URL
      */
-    public String getpPicUri() {
-        return pPicUri;
+    public String getProPicUri() {
+        return proPicUri;
     }
 
     /**
      * 设置商品默认图片URL
      *
-     * @param pPicUri 商品默认图片URL
+     * @param proPicUri 商品默认图片URL
      */
-    public void setpPicUri(String pPicUri) {
-        this.pPicUri = pPicUri;
+    public void setProPicUri(String proPicUri) {
+        this.proPicUri = proPicUri;
     }
 
     /**

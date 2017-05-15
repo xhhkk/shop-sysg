@@ -1,11 +1,11 @@
 # 用户表
-INSERT INTO tb_user (u_name, u_password, u_realname, u_email, u_phone, u_address, u_type)
+INSERT INTO tb_user (user_name, user_password, user_realname, user_email, user_phone, user_address, user_type)
 VALUES ('admin', 'admin', '系统管理员', 'admin@admin.com', '15212345678', '河南郑州', '1'),
   ('zs', '123456', '张三', 'zs12ddd@member.com', '13612345679', '河南郑州', '1');
 
 # 商品表
-INSERT INTO tb_product(P_NAME,P_REAL_PRICE,P_NOW_PRICE,IS_STOCK,P_DESC,P_SIZE,P_COLOR,P_SCORE,P_TYPE_ID,
-                       P_PIC_ID,P_PIC_URI)
+INSERT INTO tb_product(PRO_NAME,PRO_REAL_PRICE,PRO_NOW_PRICE,IS_STOCK,PRO_DESC,PRO_SIZE,PRO_COLOR,PRO_SCORE,
+                       PRO_TYPE_ID,PRO_PIC_ID,PRO_PIC_URI)
 VALUES ('【2罐】澳洲爱他美Aptamil金装婴幼儿奶粉4段（2岁以上）900g','400.00','369.00',1,'闪购商品','900g','奶黄色粉末','4.8',
         10,1,'/shop-sysg/resources/front/images/3aff4b72-1bce-4040-9d73-9b0d177299df.jpg'),
   ('【2罐】英国牛栏Cow&Gate婴儿奶粉2段6-12个月900克','400.00','316.00',1,'闪购商品','900g','奶黄色粉末','4.5',10,
@@ -16,8 +16,8 @@ VALUES ('【2罐】澳洲爱他美Aptamil金装婴幼儿奶粉4段（2岁以上�
    4,'/shop-sysg/resources/front/images/444f7550-d82e-427a-8aa0-9bbb833cc66c.jpg'),
   ('【2盒】德国Hipp/喜宝益生菌婴幼儿奶粉（0-6个月）1段600g','300.00','286.00',1,'闪购商品','600g','奶黄色粉末','4.5',10,
    5,'/shop-sysg/resources/front/images/1e20a609-077e-4dd4-a4ad-0ce3b947689c.jpg');
-INSERT INTO tb_product(P_NAME,P_REAL_PRICE,P_NOW_PRICE,IS_STOCK,P_DESC,P_SIZE,P_COLOR,P_SCORE,P_TYPE_ID,
-                       P_PIC_ID,P_PIC_URI)
+INSERT INTO tb_product(PRO_NAME,PRO_REAL_PRICE,PRO_NOW_PRICE,IS_STOCK,PRO_DESC,PRO_SIZE,PRO_COLOR,PRO_SCORE,
+                       PRO_TYPE_ID,PRO_PIC_ID,PRO_PIC_URI)
 VALUES ('80#红富士(1000g)','15.00','13.50',1,'闪购商品','1000g','红色','4.8',20,9,
         '/shop-sysg/resources/front/images/8636a356-0295-44bc-b493-204f29e2c092-medium.jpg'),
   ('黄元帅 1000g','20.00','19.9',1,'闪购商品','1000g','黄色','4.5',20,10,
@@ -31,7 +31,7 @@ VALUES ('80#红富士(1000g)','15.00','13.50',1,'闪购商品','1000g','红色',
 
 
 # 商品类型表
-INSERT INTO tb_pro_type(P_TYPE_NAME, P_TYPE_P_ID, MENU_URI, MENU_STYLE, IS_MENU)
+INSERT INTO tb_pro_type(TYPE_NAME, TYPE_P_ID, MENU_URI, MENU_STYLE, IS_MENU)
 VALUES ('淘宝商场', 0,'/shop/product-list.jsp', 4, 1),
   ('每日尝鲜', 0,'/shop/product-list.jsp', 4, 1),
   ('粮油调味', 0,'/shop/product-list.jsp', 4, 1),
@@ -41,7 +41,7 @@ VALUES ('淘宝商场', 0,'/shop/product-list.jsp', 4, 1),
   ('母婴用品', 0,'/shop/product-list.jsp', 4, 1),
   ('家庭清洁', 0,'/shop/product-list.jsp', 4, 1),
   ('家具用品', 0,'/shop/product-list.jsp', 4, 1);
-INSERT INTO tb_pro_type(P_TYPE_NAME, P_TYPE_P_ID, MENU_URI, IS_MENU)
+INSERT INTO tb_pro_type(TYPE_NAME, TYPE_P_ID, MENU_URI, IS_MENU)
 VALUES ('奶粉', 1, '/shop/product-list.jsp', 1),
   ('宝宝食品', 1, '/shop/product-list.jsp', 1),
   ('宝宝洗护', 1, '/shop/product-list.jsp', 1),

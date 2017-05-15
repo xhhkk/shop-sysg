@@ -10,9 +10,9 @@ import java.io.Serializable;
 @Data
 public class BaseDo implements Serializable{
 
-    private static final long serialVersionUID = 1L;
+    /*private static final long serialVersionUID = 1L;
 
     @Transient
-    private Long redisKeyId;
+    private Long redisKeyId;*/
 
 }

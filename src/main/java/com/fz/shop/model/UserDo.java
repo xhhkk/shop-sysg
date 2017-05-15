@@ -9,57 +9,56 @@ public class UserDo {
      * 用户编号
      */
     @Id
-    @Column(name = "U_ID")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long uId;
+    @Column(name = "USER_ID")
+    private Long userId;
 
     /**
      * 登录名
      */
-    @Column(name = "U_NAME")
-    private String uName;
+    @Column(name = "USER_NAME")
+    private String userName;
 
     /**
      * 登录密码
      */
-    @Column(name = "U_PASSWORD")
-    private String uPassword;
+    @Column(name = "USER_PASSWORD")
+    private String userPassword;
 
     /**
      * 真实姓名
      */
-    @Column(name = "U_REALNAME")
-    private String uRealname;
+    @Column(name = "USER_REALNAME")
+    private String userRealname;
 
     /**
      * 邮箱
      */
-    @Column(name = "U_EMAIL")
-    private String uEmail;
+    @Column(name = "USER_EMAIL")
+    private String userEmail;
 
     /**
      * 手机号
      */
-    @Column(name = "U_PHONE")
-    private String uPhone;
+    @Column(name = "USER_PHONE")
+    private String userPhone;
 
     /**
      * 地址
      */
-    @Column(name = "U_ADDRESS")
-    private String uAddress;
+    @Column(name = "USER_ADDRESS")
+    private String userAddress;
 
     /**
      * 用户类型 1:系统用户 0:注册会员用户
      */
-    @Column(name = "U_TYPE")
-    private Byte uType;
+    @Column(name = "USER_TYPE")
+    private Byte userType;
 
     /**
      * 状态 1:可用状态  0:删除状态  2:锁定状态
      */
-    @Column(name = "U_STATE")
-    private Byte uState;
+    @Column(name = "USER_STATE")
+    private Byte userState;
 
     /**
      * 创建人ID
@@ -88,163 +87,163 @@ public class UserDo {
     /**
      * 获取用户编号
      *
-     * @return U_ID - 用户编号
+     * @return USER_ID - 用户编号
      */
-    public Long getuId() {
-        return uId;
+    public Long getUserId() {
+        return userId;
     }
 
     /**
      * 设置用户编号
      *
-     * @param uId 用户编号
+     * @param userId 用户编号
      */
-    public void setuId(Long uId) {
-        this.uId = uId;
+    public void setUserId(Long userId) {
+        this.userId = userId;
     }
 
     /**
      * 获取登录名
      *
-     * @return U_NAME - 登录名
+     * @return USER_NAME - 登录名
      */
-    public String getuName() {
-        return uName;
+    public String getUserName() {
+        return userName;
     }
 
     /**
      * 设置登录名
      *
-     * @param uName 登录名
+     * @param userName 登录名
      */
-    public void setuName(String uName) {
-        this.uName = uName;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
     /**
      * 获取登录密码
      *
-     * @return U_PASSWORD - 登录密码
+     * @return USER_PASSWORD - 登录密码
      */
-    public String getuPassword() {
-        return uPassword;
+    public String getUserPassword() {
+        return userPassword;
     }
 
     /**
      * 设置登录密码
      *
-     * @param uPassword 登录密码
+     * @param userPassword 登录密码
      */
-    public void setuPassword(String uPassword) {
-        this.uPassword = uPassword;
+    public void setUserPassword(String userPassword) {
+        this.userPassword = userPassword;
     }
 
     /**
      * 获取真实姓名
      *
-     * @return U_REALNAME - 真实姓名
+     * @return USER_REALNAME - 真实姓名
      */
-    public String getuRealname() {
-        return uRealname;
+    public String getUserRealname() {
+        return userRealname;
     }
 
     /**
      * 设置真实姓名
      *
-     * @param uRealname 真实姓名
+     * @param userRealname 真实姓名
      */
-    public void setuRealname(String uRealname) {
-        this.uRealname = uRealname;
+    public void setUserRealname(String userRealname) {
+        this.userRealname = userRealname;
     }
 
     /**
      * 获取邮箱
      *
-     * @return U_EMAIL - 邮箱
+     * @return USER_EMAIL - 邮箱
      */
-    public String getuEmail() {
-        return uEmail;
+    public String getUserEmail() {
+        return userEmail;
     }
 
     /**
      * 设置邮箱
      *
-     * @param uEmail 邮箱
+     * @param userEmail 邮箱
      */
-    public void setuEmail(String uEmail) {
-        this.uEmail = uEmail;
+    public void setUserEmail(String userEmail) {
+        this.userEmail = userEmail;
     }
 
     /**
      * 获取手机号
      *
-     * @return U_PHONE - 手机号
+     * @return USER_PHONE - 手机号
      */
-    public String getuPhone() {
-        return uPhone;
+    public String getUserPhone() {
+        return userPhone;
     }
 
     /**
      * 设置手机号
      *
-     * @param uPhone 手机号
+     * @param userPhone 手机号
      */
-    public void setuPhone(String uPhone) {
-        this.uPhone = uPhone;
+    public void setUserPhone(String userPhone) {
+        this.userPhone = userPhone;
     }
 
     /**
      * 获取地址
      *
-     * @return U_ADDRESS - 地址
+     * @return USER_ADDRESS - 地址
      */
-    public String getuAddress() {
-        return uAddress;
+    public String getUserAddress() {
+        return userAddress;
     }
 
     /**
      * 设置地址
      *
-     * @param uAddress 地址
+     * @param userAddress 地址
      */
-    public void setuAddress(String uAddress) {
-        this.uAddress = uAddress;
+    public void setUserAddress(String userAddress) {
+        this.userAddress = userAddress;
     }
 
     /**
      * 获取用户类型 1:系统用户 0:注册会员用户
      *
-     * @return U_TYPE - 用户类型 1:系统用户 0:注册会员用户
+     * @return USER_TYPE - 用户类型 1:系统用户 0:注册会员用户
      */
-    public Byte getuType() {
-        return uType;
+    public Byte getUserType() {
+        return userType;
     }
 
     /**
      * 设置用户类型 1:系统用户 0:注册会员用户
      *
-     * @param uType 用户类型 1:系统用户 0:注册会员用户
+     * @param userType 用户类型 1:系统用户 0:注册会员用户
      */
-    public void setuType(Byte uType) {
-        this.uType = uType;
+    public void setUserType(Byte userType) {
+        this.userType = userType;
     }
 
     /**
      * 获取状态 1:可用状态  0:删除状态  2:锁定状态
      *
-     * @return U_STATE - 状态 1:可用状态  0:删除状态  2:锁定状态
+     * @return USER_STATE - 状态 1:可用状态  0:删除状态  2:锁定状态
      */
-    public Byte getuState() {
-        return uState;
+    public Byte getUserState() {
+        return userState;
     }
 
     /**
      * 设置状态 1:可用状态  0:删除状态  2:锁定状态
      *
-     * @param uState 状态 1:可用状态  0:删除状态  2:锁定状态
+     * @param userState 状态 1:可用状态  0:删除状态  2:锁定状态
      */
-    public void setuState(Byte uState) {
-        this.uState = uState;
+    public void setUserState(Byte userState) {
+        this.userState = userState;
     }
 
     /**

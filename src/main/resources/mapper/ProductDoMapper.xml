@@ -5,18 +5,18 @@
     <!--
       WARNING - @mbg.generated
     -->
-    <id column="P_ID" property="pId" jdbcType="BIGINT" />
-    <result column="P_NAME" property="pName" jdbcType="VARCHAR" />
-    <result column="P_REAL_PRICE" property="pRealPrice" jdbcType="DOUBLE" />
-    <result column="P_NOW_PRICE" property="pNowPrice" jdbcType="DOUBLE" />
+    <id column="PRO_ID" property="proId" jdbcType="BIGINT" />
+    <result column="PRO_NAME" property="proName" jdbcType="VARCHAR" />
+    <result column="PRO_REAL_PRICE" property="proRealPrice" jdbcType="DOUBLE" />
+    <result column="PRO_NOW_PRICE" property="proNowPrice" jdbcType="DOUBLE" />
     <result column="IS_STOCK" property="isStock" jdbcType="TINYINT" />
-    <result column="P_DESC" property="pDesc" jdbcType="VARCHAR" />
-    <result column="P_SIZE" property="pSize" jdbcType="VARCHAR" />
-    <result column="P_COLOR" property="pColor" jdbcType="VARCHAR" />
-    <result column="P_SCORE" property="pScore" jdbcType="DOUBLE" />
-    <result column="P_TYPE_ID" property="pTypeId" jdbcType="BIGINT" />
-    <result column="P_PIC_ID" property="pPicId" jdbcType="BIGINT" />
-    <result column="P_PIC_URI" property="pPicUri" jdbcType="VARCHAR" />
+    <result column="PRO_DESC" property="proDesc" jdbcType="VARCHAR" />
+    <result column="PRO_SIZE" property="proSize" jdbcType="VARCHAR" />
+    <result column="PRO_COLOR" property="proColor" jdbcType="VARCHAR" />
+    <result column="PRO_SCORE" property="proScore" jdbcType="DOUBLE" />
+    <result column="PRO_TYPE_ID" property="proTypeId" jdbcType="BIGINT" />
+    <result column="PRO_PIC_ID" property="proPicId" jdbcType="BIGINT" />
+    <result column="PRO_PIC_URI" property="proPicUri" jdbcType="VARCHAR" />
     <result column="STATE" property="state" jdbcType="TINYINT" />
     <result column="CREATE_BY" property="createBy" jdbcType="BIGINT" />
     <result column="CREATE_DATE" property="createDate" jdbcType="TIMESTAMP" />

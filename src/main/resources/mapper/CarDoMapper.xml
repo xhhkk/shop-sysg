@@ -6,12 +6,12 @@
       WARNING - @mbg.generated
     -->
     <id column="CAR_ID" property="carId" jdbcType="BIGINT" />
-    <result column="U_ID" property="uId" jdbcType="BIGINT" />
-    <result column="P_ID" property="pId" jdbcType="BIGINT" />
-    <result column="P_SIZE" property="pSize" jdbcType="VARCHAR" />
-    <result column="P_COLOR" property="pColor" jdbcType="VARCHAR" />
-    <result column="P_NUM" property="pNum" jdbcType="BIGINT" />
-    <result column="P_PRICE" property="pPrice" jdbcType="DOUBLE" />
+    <result column="USER_ID" property="userId" jdbcType="BIGINT" />
+    <result column="PRO_ID" property="proId" jdbcType="BIGINT" />
+    <result column="PRO_SIZE" property="proSize" jdbcType="VARCHAR" />
+    <result column="PRO_COLOR" property="proColor" jdbcType="VARCHAR" />
+    <result column="PRO_NUM" property="proNum" jdbcType="BIGINT" />
+    <result column="PRO_PRICE" property="proPrice" jdbcType="DOUBLE" />
     <result column="ALL_PRICE" property="allPrice" jdbcType="DOUBLE" />
     <result column="STATE" property="state" jdbcType="TINYINT" />
     <result column="CREATE_BY" property="createBy" jdbcType="BIGINT" />

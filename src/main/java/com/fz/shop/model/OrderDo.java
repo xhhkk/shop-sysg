@@ -16,8 +16,8 @@ public class OrderDo {
     /**
      * 用户编号
      */
-    @Column(name = "U_ID")
-    private Long uId;
+    @Column(name = "USER_ID")
+    private Long userId;
 
     /**
      * 订单价格
@@ -100,19 +100,19 @@ public class OrderDo {
     /**
      * 获取用户编号
      *
-     * @return U_ID - 用户编号
+     * @return USER_ID - 用户编号
      */
-    public Long getuId() {
-        return uId;
+    public Long getUserId() {
+        return userId;
     }
 
     /**
      * 设置用户编号
      *
-     * @param uId 用户编号
+     * @param userId 用户编号
      */
-    public void setuId(Long uId) {
-        this.uId = uId;
+    public void setUserId(Long userId) {
+        this.userId = userId;
     }
 
     /**

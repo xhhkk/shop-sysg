@@ -2,7 +2,6 @@ package com.fz.shop.mapper;
 
 import com.fz.shop.model.MenuDo;
 import com.fz.shop.util.MyMapper;
-
 import java.util.List;
 
 public interface MenuDoMapper extends MyMapper<MenuDo> {

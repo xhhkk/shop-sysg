@@ -5,9 +5,9 @@
     <!--
       WARNING - @mbg.generated
     -->
-    <id column="P_TYPE_ID" property="pTypeId" jdbcType="BIGINT" />
-    <result column="P_TYPE_NAME" property="pTypeName" jdbcType="VARCHAR" />
-    <result column="P_TYPE_P_ID" property="pTypePId" jdbcType="BIGINT" />
+    <id column="TYPE_ID" property="typeId" jdbcType="BIGINT" />
+    <result column="TYPE_NAME" property="typeName" jdbcType="VARCHAR" />
+    <result column="TYPE_P_ID" property="typePId" jdbcType="BIGINT" />
     <result column="MENU_URI" property="menuUri" jdbcType="VARCHAR" />
     <result column="MENU_STYLE" property="menuStyle" jdbcType="TINYINT" />
     <result column="IS_MENU" property="isMenu" jdbcType="TINYINT" />
@@ -17,20 +17,4 @@
     <result column="UPDATE_BY" property="updateBy" jdbcType="BIGINT" />
     <result column="UPDATE_DATE" property="updateDate" jdbcType="TIMESTAMP" />
   </resultMap>
-
-  <select id="queryLeafNode" resultType="Long">
-    SELECT
-      A.type_id
-    FROM
-      tb_pro_type P
-    WHERE NOT EXISTS
-      (SELECT
-        *
-      FROM
-        tb_pro_type T1 ,
-        tb_pro_type T2
-      WHERE T1.type_id=T2.type_p_id
-        AND T1.type_id=P.type_id)
-  </select>
-
 </mapper>

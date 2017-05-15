@@ -22,44 +22,44 @@ public class OrderDetDo {
     /**
      * 商品编号
      */
-    @Column(name = "P_ID")
-    private Long pId;
+    @Column(name = "PRO_ID")
+    private Long proId;
 
     /**
      * 商品名称
      */
-    @Column(name = "P_NAME")
-    private String pName;
+    @Column(name = "PRO_NAME")
+    private String proName;
 
     /**
      * 商品描述
      */
-    @Column(name = "P_DESC")
-    private String pDesc;
+    @Column(name = "PRO_DESC")
+    private String proDesc;
 
     /**
      * 商品大小
      */
-    @Column(name = "P_SIZE")
-    private String pSize;
+    @Column(name = "PRO_SIZE")
+    private String proSize;
 
     /**
      * 商品颜色
      */
-    @Column(name = "P_COLOR")
-    private String pColor;
+    @Column(name = "PRO_COLOR")
+    private String proColor;
 
     /**
      * 商品数量
      */
-    @Column(name = "P_NUM")
-    private Byte pNum;
+    @Column(name = "PRO_NUM")
+    private Byte proNum;
 
     /**
      * 商品单价
      */
-    @Column(name = "P_PRICE")
-    private Double pPrice;
+    @Column(name = "PRO_PRICE")
+    private Double proPrice;
 
     /**
      * 订单总计
@@ -136,127 +136,127 @@ public class OrderDetDo {
     /**
      * 获取商品编号
      *
-     * @return P_ID - 商品编号
+     * @return PRO_ID - 商品编号
      */
-    public Long getpId() {
-        return pId;
+    public Long getProId() {
+        return proId;
     }
 
     /**
      * 设置商品编号
      *
-     * @param pId 商品编号
+     * @param proId 商品编号
      */
-    public void setpId(Long pId) {
-        this.pId = pId;
+    public void setProId(Long proId) {
+        this.proId = proId;
     }
 
     /**
      * 获取商品名称
      *
-     * @return P_NAME - 商品名称
+     * @return PRO_NAME - 商品名称
      */
-    public String getpName() {
-        return pName;
+    public String getProName() {
+        return proName;
     }
 
     /**
      * 设置商品名称
      *
-     * @param pName 商品名称
+     * @param proName 商品名称
      */
-    public void setpName(String pName) {
-        this.pName = pName;
+    public void setProName(String proName) {
+        this.proName = proName;
     }
 
     /**
      * 获取商品描述
      *
-     * @return P_DESC - 商品描述
+     * @return PRO_DESC - 商品描述
      */
-    public String getpDesc() {
-        return pDesc;
+    public String getProDesc() {
+        return proDesc;
     }
 
     /**
      * 设置商品描述
      *
-     * @param pDesc 商品描述
+     * @param proDesc 商品描述
      */
-    public void setpDesc(String pDesc) {
-        this.pDesc = pDesc;
+    public void setProDesc(String proDesc) {
+        this.proDesc = proDesc;
     }
 
     /**
      * 获取商品大小
      *
-     * @return P_SIZE - 商品大小
+     * @return PRO_SIZE - 商品大小
      */
-    public String getpSize() {
-        return pSize;
+    public String getProSize() {
+        return proSize;
     }
 
     /**
      * 设置商品大小
      *
-     * @param pSize 商品大小
+     * @param proSize 商品大小
      */
-    public void setpSize(String pSize) {
-        this.pSize = pSize;
+    public void setProSize(String proSize) {
+        this.proSize = proSize;
     }
 
     /**
      * 获取商品颜色
      *
-     * @return P_COLOR - 商品颜色
+     * @return PRO_COLOR - 商品颜色
      */
-    public String getpColor() {
-        return pColor;
+    public String getProColor() {
+        return proColor;
     }
 
     /**
      * 设置商品颜色
      *
-     * @param pColor 商品颜色
+     * @param proColor 商品颜色
      */
-    public void setpColor(String pColor) {
-        this.pColor = pColor;
+    public void setProColor(String proColor) {
+        this.proColor = proColor;
     }
 
     /**
      * 获取商品数量
      *
-     * @return P_NUM - 商品数量
+     * @return PRO_NUM - 商品数量
      */
-    public Byte getpNum() {
-        return pNum;
+    public Byte getProNum() {
+        return proNum;
     }
 
     /**
      * 设置商品数量
      *
-     * @param pNum 商品数量
+     * @param proNum 商品数量
      */
-    public void setpNum(Byte pNum) {
-        this.pNum = pNum;
+    public void setProNum(Byte proNum) {
+        this.proNum = proNum;
     }
 
     /**
      * 获取商品单价
      *
-     * @return P_PRICE - 商品单价
+     * @return PRO_PRICE - 商品单价
      */
-    public Double getpPrice() {
-        return pPrice;
+    public Double getProPrice() {
+        return proPrice;
     }
 
     /**
      * 设置商品单价
      *
-     * @param pPrice 商品单价
+     * @param proPrice 商品单价
      */
-    public void setpPrice(Double pPrice) {
-        this.pPrice = pPrice;
+    public void setProPrice(Double proPrice) {
+        this.proPrice = proPrice;
     }
 
     /**

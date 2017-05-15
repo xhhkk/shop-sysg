@@ -16,38 +16,38 @@ public class CarDo {
     /**
      * 用户编号
      */
-    @Column(name = "U_ID")
-    private Long uId;
+    @Column(name = "USER_ID")
+    private Long userId;
 
     /**
      * 商品编号
      */
-    @Column(name = "P_ID")
-    private Long pId;
+    @Column(name = "PRO_ID")
+    private Long proId;
 
     /**
      * 产品大小
      */
-    @Column(name = "P_SIZE")
-    private String pSize;
+    @Column(name = "PRO_SIZE")
+    private String proSize;
 
     /**
      * 产品颜色
      */
-    @Column(name = "P_COLOR")
-    private String pColor;
+    @Column(name = "PRO_COLOR")
+    private String proColor;
 
     /**
      * 产品数量
      */
-    @Column(name = "P_NUM")
-    private Long pNum;
+    @Column(name = "PRO_NUM")
+    private Long proNum;
 
     /**
      * 产品单价
      */
-    @Column(name = "P_PRICE")
-    private Double pPrice;
+    @Column(name = "PRO_PRICE")
+    private Double proPrice;
 
     /**
      * 产品总价
@@ -106,109 +106,109 @@ public class CarDo {
     /**
      * 获取用户编号
      *
-     * @return U_ID - 用户编号
+     * @return USER_ID - 用户编号
      */
-    public Long getuId() {
-        return uId;
+    public Long getUserId() {
+        return userId;
     }
 
     /**
      * 设置用户编号
      *
-     * @param uId 用户编号
+     * @param userId 用户编号
      */
-    public void setuId(Long uId) {
-        this.uId = uId;
+    public void setUserId(Long userId) {
+        this.userId = userId;
     }
 
     /**
      * 获取商品编号
      *
-     * @return P_ID - 商品编号
+     * @return PRO_ID - 商品编号
      */
-    public Long getpId() {
-        return pId;
+    public Long getProId() {
+        return proId;
     }
 
     /**
      * 设置商品编号
      *
-     * @param pId 商品编号
+     * @param proId 商品编号
      */
-    public void setpId(Long pId) {
-        this.pId = pId;
+    public void setProId(Long proId) {
+        this.proId = proId;
     }
 
     /**
      * 获取产品大小
      *
-     * @return P_SIZE - 产品大小
+     * @return PRO_SIZE - 产品大小
      */
-    public String getpSize() {
-        return pSize;
+    public String getProSize() {
+        return proSize;
     }
 
     /**
      * 设置产品大小
      *
-     * @param pSize 产品大小
+     * @param proSize 产品大小
      */
-    public void setpSize(String pSize) {
-        this.pSize = pSize;
+    public void setProSize(String proSize) {
+        this.proSize = proSize;
     }
 
     /**
      * 获取产品颜色
      *
-     * @return P_COLOR - 产品颜色
+     * @return PRO_COLOR - 产品颜色
      */
-    public String getpColor() {
-        return pColor;
+    public String getProColor() {
+        return proColor;
     }
 
     /**
      * 设置产品颜色
      *
-     * @param pColor 产品颜色
+     * @param proColor 产品颜色
      */
-    public void setpColor(String pColor) {
-        this.pColor = pColor;
+    public void setProColor(String proColor) {
+        this.proColor = proColor;
     }
 
     /**
      * 获取产品数量
      *
-     * @return P_NUM - 产品数量
+     * @return PRO_NUM - 产品数量
      */
-    public Long getpNum() {
-        return pNum;
+    public Long getProNum() {
+        return proNum;
     }
 
     /**
      * 设置产品数量
      *
-     * @param pNum 产品数量
+     * @param proNum 产品数量
      */
-    public void setpNum(Long pNum) {
-        this.pNum = pNum;
+    public void setProNum(Long proNum) {
+        this.proNum = proNum;
     }
 
     /**
      * 获取产品单价
      *
-     * @return P_PRICE - 产品单价
+     * @return PRO_PRICE - 产品单价
      */
-    public Double getpPrice() {
-        return pPrice;
+    public Double getProPrice() {
+        return proPrice;
     }
 
     /**
      * 设置产品单价
      *
-     * @param pPrice 产品单价
+     * @param proPrice 产品单价
      */
-    public void setpPrice(Double pPrice) {
-        this.pPrice = pPrice;
+    public void setProPrice(Double proPrice) {
+        this.proPrice = proPrice;
     }
 
     /**

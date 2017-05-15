@@ -6,7 +6,7 @@
       WARNING - @mbg.generated
     -->
     <id column="PIC_ID" property="picId" jdbcType="BIGINT" />
-    <result column="P_ID" property="pId" jdbcType="BIGINT" />
+    <result column="PRO_ID" property="proId" jdbcType="BIGINT" />
     <result column="PIC_URI" property="picUri" jdbcType="VARCHAR" />
     <result column="STATE" property="state" jdbcType="TINYINT" />
     <result column="CREATE_BY" property="createBy" jdbcType="BIGINT" />

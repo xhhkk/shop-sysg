@@ -5,15 +5,15 @@
     <!--
       WARNING - @mbg.generated
     -->
-    <id column="U_ID" property="uId" jdbcType="BIGINT" />
-    <result column="U_NAME" property="uName" jdbcType="VARCHAR" />
-    <result column="U_PASSWORD" property="uPassword" jdbcType="VARCHAR" />
-    <result column="U_REALNAME" property="uRealname" jdbcType="VARCHAR" />
-    <result column="U_EMAIL" property="uEmail" jdbcType="VARCHAR" />
-    <result column="U_PHONE" property="uPhone" jdbcType="VARCHAR" />
-    <result column="U_ADDRESS" property="uAddress" jdbcType="VARCHAR" />
-    <result column="U_TYPE" property="uType" jdbcType="TINYINT" />
-    <result column="U_STATE" property="uState" jdbcType="TINYINT" />
+    <id column="USER_ID" property="userId" jdbcType="BIGINT" />
+    <result column="USER_NAME" property="userName" jdbcType="VARCHAR" />
+    <result column="USER_PASSWORD" property="userPassword" jdbcType="VARCHAR" />
+    <result column="USER_REALNAME" property="userRealname" jdbcType="VARCHAR" />
+    <result column="USER_EMAIL" property="userEmail" jdbcType="VARCHAR" />
+    <result column="USER_PHONE" property="userPhone" jdbcType="VARCHAR" />
+    <result column="USER_ADDRESS" property="userAddress" jdbcType="VARCHAR" />
+    <result column="USER_TYPE" property="userType" jdbcType="TINYINT" />
+    <result column="USER_STATE" property="userState" jdbcType="TINYINT" />
     <result column="CREATE_BY" property="createBy" jdbcType="BIGINT" />
     <result column="CREATE_DATE" property="createDate" jdbcType="TIMESTAMP" />
     <result column="UPDATE_BY" property="updateBy" jdbcType="BIGINT" />

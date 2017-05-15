@@ -21,13 +21,15 @@ public class MenuController {
     @Autowired
     private MenuService menuService;
 
-    @GetMapping(value = "/list", produces = {MediaType.APPLICATION_JSON_VALUE})
+    @GetMapping("/list")
     public Map<Long, List<MenuDo>> menuListByJson() {
-        return menuService.queryMenuAll();
+        Map<Long, List<MenuDo>> map = menuService.queryMenuAll();
+        return map;
     }
 
     @PostMapping(value = "/list", produces = {MediaType.APPLICATION_XML_VALUE})
     public Map<Long, List<MenuDo>> menuListByXml() {
+
         return menuService.queryMenuAll();
     }
 

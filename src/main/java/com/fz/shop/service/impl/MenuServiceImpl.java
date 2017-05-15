@@ -25,9 +25,9 @@ public class MenuServiceImpl extends BaseServiceImpl<MenuDo> implements MenuServ
     @Override
     public Map<Long, List<MenuDo>> queryMenuAll() {
         MenuDo menuDo = new MenuDo();
-        menuDo.setPTypePId(0L);
+        menuDo.setTypeId(0L);
 
-        menuDo.setRedisKeyId(menuDo.getPTypePId());
+//        menuDo.setRedisKeyId(menuDo.getPTypePId());
 
         return getMenuDetail(select(menuDo), 0L, new LinkedHashMap<Long, List<MenuDo>>());
     }
@@ -44,11 +44,11 @@ public class MenuServiceImpl extends BaseServiceImpl<MenuDo> implements MenuServ
 
         for (MenuDo menu : ls) {
             MenuDo menuDo = new MenuDo();
-            menuDo.setPTypePId(menu.getPTypeId());
-            menuDo.setRedisKeyId(menuDo.getPTypePId());
+            menuDo.setTypePId(menu.getTypeId());
+//            menuDo.setRedisKeyId(menuDo.getPTypePId());
 
-            if (!isLeafNode(menu.getPTypeId())) {
-                getMenuDetail(select(menuDo), menu.getPTypeId(), map);
+            if (!isLeafNode(menu.getTypeId())) {
+                getMenuDetail(select(menuDo), menu.getTypeId(), map);
             }
         }
 
@@ -56,11 +56,13 @@ public class MenuServiceImpl extends BaseServiceImpl<MenuDo> implements MenuServ
     }
 
     private Boolean isLeafNode(Long id) {
-        List<Long> ls = JSON.parseArray(super.getCacheUtils().get("menu:queryLeafNode"), Long.class);
+       /* List<Long> ls = JSON.parseArray(super.getCacheUtils().get("menu:queryLeafNode"), Long.class);
         if(ls==null){
             ls = menuDoMapper.queryLeafNode();
             super.getCacheUtils().put("menu:queryLeafNode",ls);
-        }
+        }*/
+
+        List<Long> ls = menuDoMapper.queryLeafNode();
 
         for (Long nodeId : ls) {
             if (id.equals(nodeId)) return Boolean.TRUE;

@@ -16,8 +16,8 @@ public class ProDetDo {
     /**
      * 商品编号
      */
-    @Column(name = "P_ID")
-    private Long pId;
+    @Column(name = "PRO_ID")
+    private Long proId;
 
     /**
      * 商品长度
@@ -112,19 +112,19 @@ public class ProDetDo {
     /**
      * 获取商品编号
      *
-     * @return P_ID - 商品编号
+     * @return PRO_ID - 商品编号
      */
-    public Long getpId() {
-        return pId;
+    public Long getProId() {
+        return proId;
     }
 
     /**
      * 设置商品编号
      *
-     * @param pId 商品编号
+     * @param proId 商品编号
      */
-    public void setpId(Long pId) {
-        this.pId = pId;
+    public void setProId(Long proId) {
+        this.proId = proId;
     }
 
     /**

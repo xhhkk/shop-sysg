@@ -13,6 +13,6 @@ public interface MenuService extends BaseService<MenuDo>{
     /**
      * 查询菜单
      */
-    public Map<Long,List<MenuDo>> queryMenuAll();
+    public Map<Long, List<MenuDo>> queryMenuAll();
 
 }

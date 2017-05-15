@@ -6,7 +6,7 @@
       WARNING - @mbg.generated
     -->
     <id column="DET_ID" property="detId" jdbcType="BIGINT" />
-    <result column="P_ID" property="pId" jdbcType="BIGINT" />
+    <result column="PRO_ID" property="proId" jdbcType="BIGINT" />
     <result column="DET_LENGTH" property="detLength" jdbcType="VARCHAR" />
     <result column="DET_HEIGHT" property="detHeight" jdbcType="VARCHAR" />
     <result column="DET_WIDTH" property="detWidth" jdbcType="VARCHAR" />
